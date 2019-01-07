@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace csgoDemoParser
 {
+    /*
+     * The Vector class used in this program to describe position, acceleration, and velocity direction and magnitude
+     */
     public class Vector
     {
         public float X { get; set; }
@@ -90,11 +89,7 @@ namespace csgoDemoParser
                 return this.X * this.X + this.Y * this.Y + this.Z * this.Z;
             }
         }
-
-        /// <summary>
-        /// Copy this instance. So if you want to permanently store the position of a player at a point in time, 
-        /// COPY it. 
-        /// </summary>
+        
         public Vector Copy()
         {
             return new Vector(X, Y, Z);
@@ -130,6 +125,7 @@ namespace csgoDemoParser
             return "{X: " + X + ", Y: " + Y + ", Z: " + Z + " }";
         }
 
+        // Non comma seperated ToString() functions.
         public string ToMyString()
         {
             return "@value" + X + "@value" + Y + "@value" + Z;

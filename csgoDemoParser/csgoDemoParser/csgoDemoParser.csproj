@@ -88,10 +88,13 @@
     </Compile>
     <Compile Include="Parser\PlayerPathParser.cs" />
     <Compile Include="Parser\RawDataParser.cs" />
-    <Compile Include="Parser\Structs.cs" />
-    <Compile Include="Parser\Vector.cs" />
+    <Compile Include="Utilities\Debug.cs" />
+    <Compile Include="Utilities\HelpMessage.cs" />
+    <Compile Include="Utilities\Structs.cs" />
+    <Compile Include="Utilities\Vector.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\SmoothStep.cs" />
     <EmbeddedResource Include="mainForm.resx">
       <DependentUpon>mainForm.cs</DependentUpon>
       <SubType>Designer</SubType>

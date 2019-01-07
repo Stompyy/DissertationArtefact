@@ -4,13 +4,10 @@ using DemoInfo;
 
 namespace csgoDemoParser
 {
-    /*
-     * 
-     */
     class CSVWriter
     {
         /*
-         * 
+         * Returns the standard csv header used for all game, player, and path .csv files
          */
         public static string GenerateCSVHeader(string mapName)
         {
@@ -37,9 +34,9 @@ namespace csgoDemoParser
         }
 
         /*
-         * 
+         * Writes the player details to the output stream, comma seperated, according to the order of the header names
          */
-        public static void PrintPlayerDetails(StreamWriter outputStream, Player player)
+        public static void WritePlayerDetails(StreamWriter outputStream, Player player)
         {
             try
             {
@@ -62,22 +59,10 @@ namespace csgoDemoParser
                     player.ViewDirectionY.ToString()
                     ));
             }
-            catch
+            catch (Exception e)
             {
-                try
-                {
-                    outputStream.WriteLine(string.Format("{0},{1},{2},{3},{4}",
-                    player.Name.ToString(),
-                    player.Team.ToString(),
-                    player.Position.X,
-                    player.Position.Y,
-                    player.Position.Z
-                    ));
-                }
-                catch (Exception e)
-                {
-                    outputStream.WriteLine("Parsing Error: " + e.ToString());
-                }
+                // If some elements of the player have not been initialised yet, catch will allow the error to pass and continue
+                outputStream.WriteLine("Parsing Error: " + e.ToString());
             }
         }
     }

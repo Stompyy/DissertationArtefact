@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace csgoDemoParser
 {
+    /*
+     * Useful structs for holding specific player information
+     */
     public class PlayerNamePosition
     {
         public string Name { get; set; }
@@ -14,6 +12,9 @@ namespace csgoDemoParser
         public double Y { get; set; }
         public double Z { get; set; }
 
+        /*
+         * Constructor
+         */
         public PlayerNamePosition(string name, double x, double y, double z)
         {
             this.Name = name;
@@ -24,7 +25,7 @@ namespace csgoDemoParser
     }
 
     /*
-     * 
+     * Useful structs for holding specific player information
      */
     public class PlayerNamePositionVelocity
     {
@@ -39,7 +40,7 @@ namespace csgoDemoParser
         public double VelZ { get; set; }
 
         /*
-         * 
+         * Constructor
          */
         public PlayerNamePositionVelocity(string name, double posX, double posY, double posZ, double velX = 0.0, double velY = 0.0, double velZ = 0.0)
         {

@@ -37,29 +37,7 @@ namespace csgoDemoParser
             m_DataBaseName = dataBaseName;
             m_TableList = new List<SQLTable>();
 
-            /*
-            if (CheckDatabaseExists())
-            {
-
-            }
-            */
-
             CreateNew();
-        }
-
-        /*
-         * 
-         */
-        public static bool CheckDatabaseExists(string connectionString, string databaseName)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                using (SqlCommand command = new SqlCommand($"SELECT db_id('{databaseName}')", connection))
-                {
-                    connection.Open();
-                    return (command.ExecuteScalar() != DBNull.Value);
-                }
-            }
         }
 
         /*
