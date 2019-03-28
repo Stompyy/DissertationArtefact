@@ -62,7 +62,7 @@ namespace csgoDemoParser
          * 
          * public accessor allows new keyword in derived classes for different functionality
          */
-        public Vector GetProjectedPosition(Vector startingPosition, Vector velocity, float deltaTime)
+        protected virtual Vector GetProjectedPosition(Vector startingPosition, Vector velocity, float deltaTime)
         {
             // Second order derivitive prediction using Newtonian laws of motion
             return startingPosition + (velocity * deltaTime) + (lastKnownAcceleration * 0.5f * deltaTime * deltaTime);

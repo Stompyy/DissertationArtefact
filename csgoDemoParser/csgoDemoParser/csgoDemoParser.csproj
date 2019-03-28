@@ -77,6 +77,7 @@
     <Compile Include="Experiment\Experiment.cs" />
     <Compile Include="Experiment\PlayerPathLoader.cs" />
     <Compile Include="InfernoLevel\InfernoLevelData.cs" />
+    <Compile Include="OptimisedNoSQLApproach\MasterArray.cs" />
     <Compile Include="Parser\CombineCSVFiles.cs" />
     <Compile Include="Parser\CSVParser.cs" />
     <Compile Include="Parser\CSVWriter.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Utilities\Debug.cs" />
     <Compile Include="Utilities\HelpMessage.cs" />
     <Compile Include="Utilities\Structs.cs" />
+    <Compile Include="Utilities\Timer.cs" />
     <Compile Include="Utilities\Vector.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

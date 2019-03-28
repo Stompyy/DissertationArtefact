@@ -98,6 +98,9 @@ namespace csgoDemoParser
          */
         public override void BulkInsert(StreamReader stringReader)
         {
+            Timer timer = new Timer();
+            timer.Start();
+
             // Using disposable variables clean up memory as they are completed
             // Set up the command
             using (SQLiteCommand command = new SQLiteCommand(m_Connection))
@@ -149,8 +152,10 @@ namespace csgoDemoParser
                 }
             }
 
+            timer.Stop();
+
             // Success message
-            MessageBox.Show("Finished datatable.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            MessageBox.Show("Finished database table. " + timer.GetTimeElapsed() + " MS. ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
         }
 
         /*

@@ -4,8 +4,21 @@ using System.Windows.Forms;
 
 namespace csgoDemoParser
 {
+    struct VisualisationData
+    {
+        public float X, Y;
+
+        public VisualisationData (float _x, float _y)
+        {
+            this.X = _x;
+            this.Y = _y;
+        }
+    }
+
     class Experiment
     {
+        public VisualisationData[] actualPositions, deadReckonedPositions, ledReckonedPositions;
+
         // The positions of these values in a comma seperated split list from a playerPath.csv file ReadLine()
         const int listPositionX = 2;
         const int listPositionY = 3;
@@ -43,7 +56,7 @@ namespace csgoDemoParser
         private Vector currentPosition, currentVelocity, previousVelocity;
 
         // The name of the path and experiment
-        private string experimentName;
+        public string experimentName;
 
         // The current frame of the simulation
         private int currentFrame;
@@ -56,6 +69,10 @@ namespace csgoDemoParser
             // Set the local references from the constructor arguments
             m_LedReckoningLevelDataTable = ledReckoningLevelDataTable;
             m_PlayerPath = pathLoader;
+
+            actualPositions = new VisualisationData[m_PlayerPath.pathDictionary.Count];
+            deadReckonedPositions = new VisualisationData[m_PlayerPath.pathDictionary.Count];
+            ledReckonedPositions = new VisualisationData[m_PlayerPath.pathDictionary.Count];
 
             // get the first value for the initial position
             string[] frameInfo = m_PlayerPath.pathDictionary[0];
@@ -184,7 +201,8 @@ namespace csgoDemoParser
             if (deadReckonedPosDistanceFromActual > m_TraditionalDeadReckoning.Threshold)
             {
                 // Request dead reckoning packet update
-                Vector currentAcceleration = (currentVelocity - previousVelocity);// / Experiment.framesPerSecond;  // Div / multiply by 60 here?
+                // Calculate current acceleration as change in velocity divide by time
+                Vector currentAcceleration = (currentVelocity - previousVelocity) / (1.0f / Experiment.framesPerSecond);
 
                 m_TraditionalDeadReckoning.SimulatePacketUpdate(
                     currentPosition,
@@ -214,7 +232,8 @@ namespace csgoDemoParser
             if (ledReckonedPosDistanceFromActual > m_LedReckoning.Threshold)
             {
                 // Request Led Reckoning packet update
-                Vector currentAcceleration = currentVelocity - previousVelocity;
+                // Calculate current acceleration as change in velocity divide by time
+                Vector currentAcceleration = (currentVelocity - previousVelocity) / (1.0f / Experiment.framesPerSecond);
 
                 m_LedReckoning.SimulatePacketUpdate(
                     currentPosition,
@@ -229,6 +248,10 @@ namespace csgoDemoParser
 
             // Additional debug information - need to fine tune the minimum and maximum values for the LedReckoning threshold
             debug += "," + m_LedReckoning.Threshold.ToString();
+
+            actualPositions[currentFrame] = new VisualisationData(currentPosition.X, currentPosition.Y);
+            deadReckonedPositions[currentFrame] = new VisualisationData(deadReckonedPosition.X, deadReckonedPosition.Y);
+            ledReckonedPositions[currentFrame] = new VisualisationData(ledReckonedPosition.X, ledReckonedPosition.Y);
 
             // Construct the return string
             return currentFrame + "," +

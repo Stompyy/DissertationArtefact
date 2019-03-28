@@ -70,12 +70,12 @@ namespace csgoDemoParser
         /*
          * Uses Newtonian motion equation to get a simulated position based off the last known position
          */
-        public new Vector GetProjectedPosition(Vector startingPosition, Vector velocity, float deltaTime)
+        protected override Vector GetProjectedPosition(Vector startingPosition, Vector velocity, float deltaTime)
         {
             // I think this may need to look at the actual changes in velocity not the velocity trend
             // Adjust the acceleration in line with the velocity trend data
             // Attempts to push the simulation towards the velocity trend by finding the average of the last known acceleration and the velocityTrend compliance
-            Vector accelerationTrend = (lastKnownAcceleration + velocityTrend * compliance) / 2.0f;
+            Vector accelerationTrend = (lastKnownAcceleration);// + velocityTrend * compliance) / 2.0f;
 
             // Second order derivitive prediction using Newtonian laws of motion
             return startingPosition + (velocity * deltaTime) + (accelerationTrend * 0.5f * deltaTime * deltaTime);
@@ -86,12 +86,29 @@ namespace csgoDemoParser
          */
         private Vector GetVelocityTrend(double playerPositionX, double playerPositionY)
         {
+            // Translate the world position into appropriate data structure look up coordinates
             int[] lookUpCoords = InfernoLevelData.TranslatePositionIntoLookUpCoordinates(playerPositionX, playerPositionY);
 
-            // Look into smooth stepping the velocity trend between grid locations
-            //Utilities.SmoothStep()
+            //  Look at the rounded down int value
+            Vector lowerBound = m_LedReckoningLevelDataTable[lookUpCoords[0], lookUpCoords[1]];
 
-            return m_LedReckoningLevelDataTable[lookUpCoords[0], lookUpCoords[1]];
+            // Look at the rounded up int value
+            Vector upperBound = m_LedReckoningLevelDataTable[lookUpCoords[0] + 1, lookUpCoords[1] + 1];
+
+            // Get the x position place in the grid tile as a 0-1 value across the tile
+            double xStep = (playerPositionX - (InfernoLevelData.minimumXValue + lookUpCoords[0] * InfernoLevelData.subdivisionSizeX)) / InfernoLevelData.subdivisionSizeX;
+
+
+            // Get the y position place in the grid tile as a 0-1 value across the tile
+            double yStep = (playerPositionY - (InfernoLevelData.minimumYValue + lookUpCoords[1] * InfernoLevelData.subdivisionSizeY)) / InfernoLevelData.subdivisionSizeY;
+
+            // Use the 0-1 placement within the grid values to smoothstep (bell shape interpolation) between the lower and upper bounds
+            return new Vector()
+            {
+                X = lowerBound.X + (upperBound.X - lowerBound.X) * Utilities.FSmoothStep(xStep),
+                Y = lowerBound.Y + (upperBound.Y - lowerBound.Y) * Utilities.FSmoothStep(yStep),
+                Z = lowerBound.Z
+            };
         }
 
         /*

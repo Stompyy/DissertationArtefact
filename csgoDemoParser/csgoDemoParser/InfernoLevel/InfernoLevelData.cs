@@ -15,13 +15,16 @@ namespace csgoDemoParser
         public const double minimumYValue = -790.0;
         public const double maximumYValue = 3605.0;
 
+        private const double mapTotalX = maximumXValue - minimumXValue;
+        private const double mapTotalY = maximumYValue - minimumYValue;
+
         // This is a constant for the game counter strike: global offensive. 
         // Confirmed by using console commands in game 
         public const float maxPlayerSpeed = 300.0f;
 
         // The size of each grid piece
-        public const double subdivisionSizeX = (maximumXValue - minimumXValue) / (double)Experiment.LevelAxisSubdivisions;
-        public const double subdivisionSizeY = (maximumYValue - minimumYValue) / (double)Experiment.LevelAxisSubdivisions;
+        public const double subdivisionSizeX = mapTotalX / (double)Experiment.LevelAxisSubdivisions;
+        public const double subdivisionSizeY = mapTotalY / (double)Experiment.LevelAxisSubdivisions;
 
 
         /*
@@ -39,6 +42,23 @@ namespace csgoDemoParser
             int returnY = (int)((y - minimumYValue) / subdivisionSizeY);
 
             return new int[] { returnX, returnY };
+        }
+
+
+        /*
+         * 
+         */
+        public static VisualisationData TranslatePositionIntoRenderCoordinates(double posX, double posY, double imageWidth, double imageHeight)
+        {
+            // Sanity check that the value is a real position in the game
+            posX = Clamp(posX, minimumXValue, maximumXValue - 1);
+            posY = Clamp(posY, minimumYValue, maximumYValue - 1);
+            
+            // Calculate the return value
+            float returnX = (float)(imageWidth * (posX - minimumXValue) / mapTotalX);
+            float returnY = (float)(imageHeight * (posY - minimumYValue) / mapTotalY);
+
+            return new VisualisationData(returnX, returnY);
         }
 
         /*

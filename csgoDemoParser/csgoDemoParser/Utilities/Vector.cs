@@ -120,6 +120,11 @@ namespace csgoDemoParser
             return new Vector() { X = a.X / b, Y = a.Y / b, Z = a.Z / b };
         }
 
+        public static Vector operator /(Vector a, int b)
+        {
+            return new Vector() { X = a.X / (float)b, Y = a.Y / (float)b, Z = a.Z / (float)b };
+        }
+
         public override string ToString()
         {
             return "{X: " + X + ", Y: " + Y + ", Z: " + Z + " }";

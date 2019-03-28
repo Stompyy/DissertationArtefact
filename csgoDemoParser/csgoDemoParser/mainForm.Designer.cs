@@ -53,6 +53,8 @@
             this.LoadLedReckoningMasterVelocityCSV_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.loadPlayerPathsToExperimentUponToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PerformExperiment_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.loadMasterCSVIntoMemory_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.VectorMapPicturePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VectorMapPictureBox)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -89,7 +91,8 @@
             this.toolStripButton2,
             this.toolStripDropDownButton1,
             this.toolStripButton3,
-            this.toolStripButton4});
+            this.toolStripButton4,
+            this.toolStripDropDownButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1246, 30);
@@ -283,6 +286,22 @@
             this.PerformExperiment_ToolStripMenuItem.Text = "Perform experiment";
             this.PerformExperiment_ToolStripMenuItem.Click += new System.EventHandler(this.PerformExperiment_ToolStripMenuItem_Click);
             // 
+            // toolStripDropDownButton2
+            // 
+            this.toolStripDropDownButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.loadMasterCSVIntoMemory_ToolStripMenuItem});
+            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(92, 27);
+            this.toolStripDropDownButton2.Text = "Optimised";
+            // 
+            // loadMasterCSVIntoMemory_ToolStripMenuItem
+            // 
+            this.loadMasterCSVIntoMemory_ToolStripMenuItem.Name = "loadMasterCSVIntoMemory_ToolStripMenuItem";
+            this.loadMasterCSVIntoMemory_ToolStripMenuItem.Size = new System.Drawing.Size(269, 26);
+            this.loadMasterCSVIntoMemory_ToolStripMenuItem.Text = "LoadMasterCSVIntoMemory";
+            this.loadMasterCSVIntoMemory_ToolStripMenuItem.Click += new System.EventHandler(this.loadMasterCSVIntoMemory_ToolStripMenuItem_Click);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -328,6 +347,8 @@
         private System.Windows.Forms.ToolStripMenuItem PerformExperiment_ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem CombineVelocityColumnCSVFilesIfQueryingSeperately_ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem CombineVelocityColumncsvFilesIfQueryingSeperatelyMain_ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
+        private System.Windows.Forms.ToolStripMenuItem loadMasterCSVIntoMemory_ToolStripMenuItem;
     }
 }
 

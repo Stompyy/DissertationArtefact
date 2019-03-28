@@ -39,7 +39,7 @@ namespace csgoDemoParser
         MasterTable m_MasterTable;
         PlayerPathLoader m_PlayerPathLoader;
         Vector[,] m_LedReckoningLevelDataTable;
-        
+
         /*
          * The Constructor for the Winforms mainForm
          */
@@ -53,7 +53,7 @@ namespace csgoDemoParser
         }
 
         /*
-         * Display a mesage box that gives guidance on the use and ordering of the parsing functions
+         * Display a message box that gives guidance on the use and ordering of the parsing functions
          */
         private void HelpButton_Click(object sender, EventArgs e)
         {
@@ -88,12 +88,12 @@ namespace csgoDemoParser
             // Non static function as data is shared and accumulated by the program. Instance makes design sense
             PlayerPathParser playerPathParser = new PlayerPathParser();
 
-            // Chooses player#.csv and parses into seperate path .csv files
+            // Chooses player#.csv and parses into separate path .csv files
             playerPathParser.SelectAndParsePlayerCSVIntoPaths();
         }
 
         /*
-         * Combines seperate .csv files into one master.csv file
+         * Combines separate .csv files into one master.csv file
          * Used to collate ALL of the data into one file
          */
         private void CombineMultipleCSVFilesIntoMasterCSV_ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -165,7 +165,7 @@ namespace csgoDemoParser
          * Returns the velocities for those entries and averages them before writing to .csv file
          * The aim is to get a data structure Experiment.LevelAxisSubdivisions * Experiment.LevelAxisSubdivisions large
          * where each entry represents the average velocity of all database entries where the position falls within the bounds
-         * dictated by the nested for loops, and reliant upon the min max query data perfomed after creating the database.
+         * dictated by the nested for loops, and reliant upon the min max query data performed after creating the database.
          * 
          * For a stepped approach that allowed me to run this program over multiple occasions, we choose to write a single line 
          * of queries at a time, saving a new csv file (named according to its row number) each time. Depending on the size
@@ -189,18 +189,18 @@ namespace csgoDemoParser
                 StreamWriter outputStream = new StreamWriter(outputFileName);
 
                 // Gets the averaged velocity data for the column x
-                // The two dimensional array is a structure required if the query is to be peromed as a single function rather than a 
+                // The two dimensional array is a structure required if the query is to be performed as a single function rather than a 
                 // stepped approach. This non-stepped functionality is within the MasterTable.SegmentDatabaseIntoArray() function
                 Vector[,] result = m_MasterTable.SegmentDatabaseIntoArray(Experiment.LevelAxisSubdivisions, x);
 
-                // Intialise an empty string
+                // Initialise an empty string
                 string line = "";
 
-                // For each value in the query result, write a comma seperated value to the string
+                // For each value in the query result, write a comma separated value to the string
                 for (int y = 0; y < Experiment.LevelAxisSubdivisions; y++)
                 {
                     // ToMyString() returns a single NON-comma seperated value. Here we use the arbitary non numerical char '@'
-                    // to allow an explicit string.Split('@') later that does not warp the comma seperated nature of .csv tables
+                    // to allow an explicit string.Split('@') later that does not warp the comma separated nature of .csv tables
                     // and maintains the correct columns per item
                     line += result[x, y].ToMyString() + ",";
                 }
@@ -208,7 +208,7 @@ namespace csgoDemoParser
                 // Write the line to the output
                 outputStream.WriteLine(line);
 
-                // Finally close the cuurent output
+                // Finally close the current output
                 outputStream.Close();
             }
 
@@ -287,6 +287,8 @@ namespace csgoDemoParser
         {
             // Starts a new experiment with the appropriate previously chosen data
             Experiment experiment = new Experiment(m_PlayerPathLoader, m_LedReckoningLevelDataTable);
+
+            DrawAndSavePathVisualisation(experiment);
         }
 
         /*
@@ -319,7 +321,7 @@ namespace csgoDemoParser
                 for (int y = 0; y < Experiment.LevelAxisSubdivisions; y++)
                 {
                     // Draw the map the right way around, reverse the 0-99 y value - Just aesthetic convention shows Map level De_Inferno being this way up
-                    // Get the velocity trend value stored in the Vectpr[,] m_LedReckoningLevelDataTable for that tile
+                    // Get the velocity trend value stored in the Vector[,] m_LedReckoningLevelDataTable for that tile
                     Vector velocityTrend = m_LedReckoningLevelDataTable[x, Experiment.LevelAxisSubdivisions - y - 1];
 
                     // Only draw a line if there is a non zero vector there
@@ -362,6 +364,99 @@ namespace csgoDemoParser
             loadPlayerPathsToExperimentUponToolStripMenuItem.Enabled = true;
         }
 
+        /*
+         * 
+         */
+        private void loadMasterCSVIntoMemory_ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MasterArray masterArray = new MasterArray();
+
+            m_LedReckoningLevelDataTable = masterArray.averageVelocityTable;
+
+            DrawAndSaveDataVisualisation();
+        }
+
+        /*
+         * Draw and save path visualisation
+         */
+        private void DrawAndSavePathVisualisation(Experiment experiment)
+        {
+            // Create the graphics objects needed for the displaying and saving of the data visualisation
+            Bitmap returnBMP = new Bitmap(VectorMapPictureBox.Width, VectorMapPictureBox.Height);
+            Graphics returnGraphics = Graphics.FromImage(returnBMP);
+
+            //
+            float xStep = (float)VectorMapPictureBox.Width / Experiment.LevelAxisSubdivisions;
+            float yStep = (float)VectorMapPictureBox.Height / Experiment.LevelAxisSubdivisions;
+
+            // Create the pen
+            Pen pen = new Pen(Color.Black, 1.0f);
+            
+            // 
+            for (int i = 1; i < experiment.actualPositions.Length; i++)
+            {
+                VisualisationData startPos = InfernoLevelData.TranslatePositionIntoRenderCoordinates(experiment.actualPositions[i-1].X, experiment.actualPositions[i-1].Y, VectorMapPictureBox.Width, VectorMapPictureBox.Height);
+                VisualisationData endPos = InfernoLevelData.TranslatePositionIntoRenderCoordinates(experiment.actualPositions[i].X, experiment.actualPositions[i].Y, VectorMapPictureBox.Width, VectorMapPictureBox.Height);
+                
+                // Draw it
+                returnGraphics.DrawLine(pen, 
+                    startPos.X,
+                    startPos.Y,
+                    endPos.X,
+                    endPos.Y
+                    );
+            }
+
+            pen.Color = Color.Red;
+
+            // 
+            for (int i = 1; i < experiment.deadReckonedPositions.Length; i++)
+            {
+                VisualisationData startPos = InfernoLevelData.TranslatePositionIntoRenderCoordinates(experiment.deadReckonedPositions[i - 1].X, experiment.deadReckonedPositions[i - 1].Y, VectorMapPictureBox.Width, VectorMapPictureBox.Height);
+                VisualisationData endPos = InfernoLevelData.TranslatePositionIntoRenderCoordinates(experiment.deadReckonedPositions[i].X, experiment.deadReckonedPositions[i].Y, VectorMapPictureBox.Width, VectorMapPictureBox.Height);
+
+                // Draw it
+                returnGraphics.DrawLine(pen,
+                    startPos.X,
+                    startPos.Y,
+                    endPos.X,
+                    endPos.Y
+                    );
+            }
+
+            pen.Color = Color.Blue;
+
+            // 
+            for (int i = 1; i < experiment.ledReckonedPositions.Length; i++)
+            {
+                VisualisationData startPos = InfernoLevelData.TranslatePositionIntoRenderCoordinates(experiment.ledReckonedPositions[i - 1].X, experiment.ledReckonedPositions[i - 1].Y, VectorMapPictureBox.Width, VectorMapPictureBox.Height);
+                VisualisationData endPos = InfernoLevelData.TranslatePositionIntoRenderCoordinates(experiment.ledReckonedPositions[i].X, experiment.ledReckonedPositions[i].Y, VectorMapPictureBox.Width, VectorMapPictureBox.Height);
+
+                // Draw it
+                returnGraphics.DrawLine(pen,
+                    startPos.X,
+                    startPos.Y,
+                    endPos.X,
+                    endPos.Y
+                    );
+            }
+
+            // Dispose the pen
+            pen.Dispose();
+
+            // Save the new image as a .png
+            returnBMP.Save("path." + experiment.experimentName + ".png", System.Drawing.Imaging.ImageFormat.Png);
+
+            // Set the image of the Winforms picture box to the new image
+            VectorMapPictureBox.Image = returnBMP;
+
+            // Success message
+            MessageBox.Show("Image saved as path." + experiment.experimentName + ".png.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+            // Set next ui for experiment to active
+            //loadPlayerPathsToExperimentUponToolStripMenuItem.Enabled = true;
+        }
+
 
 
         /*
@@ -379,7 +474,7 @@ namespace csgoDemoParser
          *      -- Shouldn't be a zero distance path. No point
          *      -- Output comparison results
          *      
-         *      -- incorporate threshold stuff. Seperate experiment?
+         *      -- incorporate threshold stuff. Separate experiment?
          *      -- Like maybe a path long experiment that tracks a frame by frame displacement
          *      - incorporate std dead reckoning protocol like update after 5 secs etc
          *      
