@@ -76,6 +76,7 @@
     <Compile Include="DeadReckoning\TraditionalDeadReckoning.cs" />
     <Compile Include="Experiment\Experiment.cs" />
     <Compile Include="Experiment\PlayerPathLoader.cs" />
+    <Compile Include="Experiment\Visualiser.cs" />
     <Compile Include="InfernoLevel\InfernoLevelData.cs" />
     <Compile Include="OptimisedNoSQLApproach\MasterArray.cs" />
     <Compile Include="Parser\CombineCSVFiles.cs" />

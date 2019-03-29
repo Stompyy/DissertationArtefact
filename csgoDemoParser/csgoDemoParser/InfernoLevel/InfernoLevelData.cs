@@ -56,7 +56,7 @@ namespace csgoDemoParser
             
             // Calculate the return value
             float returnX = (float)(imageWidth * (posX - minimumXValue) / mapTotalX);
-            float returnY = (float)(imageHeight * (posY - minimumYValue) / mapTotalY);
+            float returnY = (float)(imageHeight - imageHeight * (posY - minimumYValue) / mapTotalY);    // Flip the up down to appear right
 
             return new VisualisationData(returnX, returnY);
         }

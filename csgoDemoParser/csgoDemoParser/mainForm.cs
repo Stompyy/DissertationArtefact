@@ -39,6 +39,7 @@ namespace csgoDemoParser
         MasterTable m_MasterTable;
         PlayerPathLoader m_PlayerPathLoader;
         Vector[,] m_LedReckoningLevelDataTable;
+        Visualiser m_Visualiser;
 
         /*
          * The Constructor for the Winforms mainForm
@@ -237,7 +238,11 @@ namespace csgoDemoParser
             m_LedReckoningLevelDataTable = LedReckoning.LoadLedReckoningData();
 
             // Diplays a visual representation into the winforms picture box, and saves the graphics as a .png image in the program's directory
-            DrawAndSaveDataVisualisation();
+            m_Visualiser = new Visualiser(VectorMapPictureBox, m_LedReckoningLevelDataTable);
+            m_Visualiser.DrawAndSaveDataVisualisation();
+
+            // Set next ui for experiment to active
+            loadPlayerPathsToExperimentUponToolStripMenuItem.Enabled = true;
         }
 
         /*
@@ -288,80 +293,8 @@ namespace csgoDemoParser
             // Starts a new experiment with the appropriate previously chosen data
             Experiment experiment = new Experiment(m_PlayerPathLoader, m_LedReckoningLevelDataTable);
 
-            DrawAndSavePathVisualisation(experiment);
-        }
-
-        /*
-         * Draw and save the data visualisation
-         */
-        private void DrawAndSaveDataVisualisation()
-        {
-            // Create the graphics objects needed for the displaying and saving of the data visualisation
-            Bitmap returnBMP = new Bitmap(VectorMapPictureBox.Width, VectorMapPictureBox.Height);
-            Graphics returnGraphics = Graphics.FromImage(returnBMP);
-
-            //
-            float xStep = (float)VectorMapPictureBox.Width / Experiment.LevelAxisSubdivisions;
-            float yStep = (float)VectorMapPictureBox.Height / Experiment.LevelAxisSubdivisions;
-
-            // The max size of a velocity arrow is the game rule's max allowed speed. An average cannot be higher
-            float maxSize = InfernoLevelData.maxPlayerSpeed;
-
-            // Create the pen
-            Pen pen = new Pen(Color.Black, 1.0f)
-            {
-                // Make the line look nice with an arrow pointing the relevant direction
-                //     StartCap = System.Drawing.Drawing2D.LineCap.RoundAnchor,
-                EndCap = System.Drawing.Drawing2D.LineCap.ArrowAnchor
-            };
-            
-            // For each potential tile, look up in velocity trend in m_LedReckoningLevelDataTable and try to draw it
-            for (int x = 0; x < Experiment.LevelAxisSubdivisions; x++)
-            {
-                for (int y = 0; y < Experiment.LevelAxisSubdivisions; y++)
-                {
-                    // Draw the map the right way around, reverse the 0-99 y value - Just aesthetic convention shows Map level De_Inferno being this way up
-                    // Get the velocity trend value stored in the Vector[,] m_LedReckoningLevelDataTable for that tile
-                    Vector velocityTrend = m_LedReckoningLevelDataTable[x, Experiment.LevelAxisSubdivisions - y - 1];
-
-                    // Only draw a line if there is a non zero vector there
-                    if (velocityTrend.Length != 0.0)
-                    {
-                        // Set the colour as a grayscale currently ish (/2)
-                        pen.Color = Color.FromArgb(
-                            128,
-                            (int)velocityTrend.Length / 2,
-                            (int)velocityTrend.Length / 2,
-                            (int)velocityTrend.Length / 2);
-
-                        // Start drawing from the centre of the tile
-                        float startX = (x + 0.5f) * xStep;
-                        float startY = (y + 0.5f) * yStep;
-
-                        // * Step / (2.0f * maxSize) limits the draw to the edge of the tile
-                        float endX = startX + (velocityTrend.X * xStep / (0.1f * maxSize));
-                        float endY = startY + (velocityTrend.Y * yStep / (0.1f * maxSize));
-
-                        // Draw it
-                        returnGraphics.DrawLine(pen, startX, startY, endX, endY);
-                    }
-                }
-            }
-
-            // Dispose the pen
-            pen.Dispose();
-
-            // Save the new image as a .png
-            returnBMP.Save("visualisation.png", System.Drawing.Imaging.ImageFormat.Png);
-
-            // Set the image of the Winforms picture box to the new image
-            VectorMapPictureBox.Image = returnBMP;
-            
-            // Success message
-            MessageBox.Show("Image saved as visualisation.png.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-
-            // Set next ui for experiment to active
-            loadPlayerPathsToExperimentUponToolStripMenuItem.Enabled = true;
+            // Show and save visualisation
+            m_Visualiser.DrawAndSavePathVisualisation(experiment);
         }
 
         /*
@@ -373,88 +306,22 @@ namespace csgoDemoParser
 
             m_LedReckoningLevelDataTable = masterArray.averageVelocityTable;
 
-            DrawAndSaveDataVisualisation();
-        }
-
-        /*
-         * Draw and save path visualisation
-         */
-        private void DrawAndSavePathVisualisation(Experiment experiment)
-        {
-            // Create the graphics objects needed for the displaying and saving of the data visualisation
-            Bitmap returnBMP = new Bitmap(VectorMapPictureBox.Width, VectorMapPictureBox.Height);
-            Graphics returnGraphics = Graphics.FromImage(returnBMP);
-
-            //
-            float xStep = (float)VectorMapPictureBox.Width / Experiment.LevelAxisSubdivisions;
-            float yStep = (float)VectorMapPictureBox.Height / Experiment.LevelAxisSubdivisions;
-
-            // Create the pen
-            Pen pen = new Pen(Color.Black, 1.0f);
-            
-            // 
-            for (int i = 1; i < experiment.actualPositions.Length; i++)
-            {
-                VisualisationData startPos = InfernoLevelData.TranslatePositionIntoRenderCoordinates(experiment.actualPositions[i-1].X, experiment.actualPositions[i-1].Y, VectorMapPictureBox.Width, VectorMapPictureBox.Height);
-                VisualisationData endPos = InfernoLevelData.TranslatePositionIntoRenderCoordinates(experiment.actualPositions[i].X, experiment.actualPositions[i].Y, VectorMapPictureBox.Width, VectorMapPictureBox.Height);
-                
-                // Draw it
-                returnGraphics.DrawLine(pen, 
-                    startPos.X,
-                    startPos.Y,
-                    endPos.X,
-                    endPos.Y
-                    );
-            }
-
-            pen.Color = Color.Red;
-
-            // 
-            for (int i = 1; i < experiment.deadReckonedPositions.Length; i++)
-            {
-                VisualisationData startPos = InfernoLevelData.TranslatePositionIntoRenderCoordinates(experiment.deadReckonedPositions[i - 1].X, experiment.deadReckonedPositions[i - 1].Y, VectorMapPictureBox.Width, VectorMapPictureBox.Height);
-                VisualisationData endPos = InfernoLevelData.TranslatePositionIntoRenderCoordinates(experiment.deadReckonedPositions[i].X, experiment.deadReckonedPositions[i].Y, VectorMapPictureBox.Width, VectorMapPictureBox.Height);
-
-                // Draw it
-                returnGraphics.DrawLine(pen,
-                    startPos.X,
-                    startPos.Y,
-                    endPos.X,
-                    endPos.Y
-                    );
-            }
-
-            pen.Color = Color.Blue;
-
-            // 
-            for (int i = 1; i < experiment.ledReckonedPositions.Length; i++)
-            {
-                VisualisationData startPos = InfernoLevelData.TranslatePositionIntoRenderCoordinates(experiment.ledReckonedPositions[i - 1].X, experiment.ledReckonedPositions[i - 1].Y, VectorMapPictureBox.Width, VectorMapPictureBox.Height);
-                VisualisationData endPos = InfernoLevelData.TranslatePositionIntoRenderCoordinates(experiment.ledReckonedPositions[i].X, experiment.ledReckonedPositions[i].Y, VectorMapPictureBox.Width, VectorMapPictureBox.Height);
-
-                // Draw it
-                returnGraphics.DrawLine(pen,
-                    startPos.X,
-                    startPos.Y,
-                    endPos.X,
-                    endPos.Y
-                    );
-            }
-
-            // Dispose the pen
-            pen.Dispose();
-
-            // Save the new image as a .png
-            returnBMP.Save("path." + experiment.experimentName + ".png", System.Drawing.Imaging.ImageFormat.Png);
-
-            // Set the image of the Winforms picture box to the new image
-            VectorMapPictureBox.Image = returnBMP;
-
-            // Success message
-            MessageBox.Show("Image saved as path." + experiment.experimentName + ".png.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            m_Visualiser = new Visualiser(VectorMapPictureBox, m_LedReckoningLevelDataTable);
+            m_Visualiser.DrawAndSaveDataVisualisation();
 
             // Set next ui for experiment to active
-            //loadPlayerPathsToExperimentUponToolStripMenuItem.Enabled = true;
+            loadPlayerPathsToExperimentUponToolStripMenuItem.Enabled = true;
+        }
+
+        private void ZoomScrollBar_Scroll(object sender, ScrollEventArgs e)
+        {
+            int zoomStrength = 50;
+            int scrollValue = e.NewValue - e.OldValue;
+
+            //Add the width and height to the picture box dimensions
+
+            VectorMapPictureBox.Width += scrollValue * zoomStrength;
+            VectorMapPictureBox.Height += scrollValue * zoomStrength;
         }
 
 

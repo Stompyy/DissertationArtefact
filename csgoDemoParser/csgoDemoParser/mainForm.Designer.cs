@@ -55,6 +55,8 @@
             this.PerformExperiment_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.loadMasterCSVIntoMemory_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ZoomScrollBar = new System.Windows.Forms.HScrollBar();
+            this.label1 = new System.Windows.Forms.Label();
             this.VectorMapPicturePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VectorMapPictureBox)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -68,9 +70,9 @@
             this.VectorMapPicturePanel.AutoScroll = true;
             this.VectorMapPicturePanel.BackColor = System.Drawing.SystemColors.Window;
             this.VectorMapPicturePanel.Controls.Add(this.VectorMapPictureBox);
-            this.VectorMapPicturePanel.Location = new System.Drawing.Point(12, 47);
+            this.VectorMapPicturePanel.Location = new System.Drawing.Point(12, 56);
             this.VectorMapPicturePanel.Name = "VectorMapPicturePanel";
-            this.VectorMapPicturePanel.Size = new System.Drawing.Size(1222, 391);
+            this.VectorMapPicturePanel.Size = new System.Drawing.Size(1222, 382);
             this.VectorMapPicturePanel.TabIndex = 17;
             // 
             // VectorMapPictureBox
@@ -78,7 +80,7 @@
             this.VectorMapPictureBox.Location = new System.Drawing.Point(4, 4);
             this.VectorMapPictureBox.Name = "VectorMapPictureBox";
             this.VectorMapPictureBox.Size = new System.Drawing.Size(1080, 1080);
-            this.VectorMapPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.VectorMapPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.VectorMapPictureBox.TabIndex = 0;
             this.VectorMapPictureBox.TabStop = false;
             // 
@@ -302,18 +304,38 @@
             this.loadMasterCSVIntoMemory_ToolStripMenuItem.Text = "LoadMasterCSVIntoMemory";
             this.loadMasterCSVIntoMemory_ToolStripMenuItem.Click += new System.EventHandler(this.loadMasterCSVIntoMemory_ToolStripMenuItem_Click);
             // 
+            // ZoomScrollBar
+            // 
+            this.ZoomScrollBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ZoomScrollBar.Location = new System.Drawing.Point(713, 35);
+            this.ZoomScrollBar.Name = "ZoomScrollBar";
+            this.ZoomScrollBar.Size = new System.Drawing.Size(500, 14);
+            this.ZoomScrollBar.TabIndex = 1;
+            this.ZoomScrollBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.ZoomScrollBar_Scroll);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(620, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(90, 17);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Zoom image:";
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1246, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ZoomScrollBar);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.VectorMapPicturePanel);
             this.Name = "mainForm";
             this.Text = "CSGO Demo Parser";
             this.VectorMapPicturePanel.ResumeLayout(false);
-            this.VectorMapPicturePanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VectorMapPictureBox)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
@@ -349,6 +371,8 @@
         private System.Windows.Forms.ToolStripMenuItem CombineVelocityColumncsvFilesIfQueryingSeperatelyMain_ToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
         private System.Windows.Forms.ToolStripMenuItem loadMasterCSVIntoMemory_ToolStripMenuItem;
+        private System.Windows.Forms.HScrollBar ZoomScrollBar;
+        private System.Windows.Forms.Label label1;
     }
 }
 
