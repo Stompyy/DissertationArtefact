@@ -1,0 +1,11 @@
+﻿  pch.cpp
+  InfernoLevelData.cpp
+  MyAreaVelocityInfo.cpp
+d:\uni\2019\comp350_algorithmsandoptimisations\cppcsvparser\cppcsvparser\cppcsvparser\myareavelocityinfo.cpp(28): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+  MyVector.cpp
+  cppCSVParser.cpp
+d:\uni\2019\comp350_algorithmsandoptimisations\cppcsvparser\cppcsvparser\cppcsvparser\cppcsvparser.cpp(50): warning C4244: 'argument': conversion from 'int' to 'const float', possible loss of data
+d:\uni\2019\comp350_algorithmsandoptimisations\cppcsvparser\cppcsvparser\cppcsvparser\cppcsvparser.cpp(42): warning C4101: 'e': unreferenced local variable
+d:\uni\2019\comp350_algorithmsandoptimisations\cppcsvparser\cppcsvparser\cppcsvparser\cppcsvparser.cpp(73): warning C4101: 'e': unreferenced local variable
+  Generating Code...
+  cppCSVParser.vcxproj -> D:\Uni\2019\Comp350_AlgorithmsAndOptimisations\CppCSVParser\cppCSVParser\Debug\cppCSVParser.exe
