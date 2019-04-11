@@ -51,7 +51,8 @@ namespace csgoDemoParser
                 // Disposable string reader for easy clean up
                 using (StreamReader stringReader = new StreamReader(openFileDialog.FileName))
                 {
-
+                    // Store each line in memory as part of a larger data structure, to be parsed into cumalative... 
+                    // Wait... I should just do that bit now!
                 }
             }
         }
@@ -75,7 +76,9 @@ namespace csgoDemoParser
                     timer.Start();
 
                     // Keep to this local scope so that garbage collector can dispose of it when out of scope (hopefully)
-                    AreaVelocityInfo[,] cumalativeVelocityTable = new AreaVelocityInfo[Experiment.LevelAxisSubdivisions, Experiment.LevelAxisSubdivisions];
+
+                    AreaVelocityInfo[,] cumalativeVelocityTable = new AreaVelocityInfo
+                        [Experiment.LevelAxisSubdivisions, Experiment.LevelAxisSubdivisions];
                     
                     // Lengthy init of data structure. Can we not just set default values for our own objects that are not null?
                     for (int x = 0; x < Experiment.LevelAxisSubdivisions; x++)

@@ -75,7 +75,7 @@ namespace csgoDemoParser
             // I think this may need to look at the actual changes in velocity not the velocity trend
             // Adjust the acceleration in line with the velocity trend data
             // Attempts to push the simulation towards the velocity trend by finding the average of the last known acceleration and the velocityTrend compliance
-            Vector accelerationTrend = (lastKnownAcceleration);// + velocityTrend * compliance) / 2.0f;
+            Vector accelerationTrend = (lastKnownAcceleration + velocityTrend * compliance) / 2.0f; //
 
             // Second order derivitive prediction using Newtonian laws of motion
             return startingPosition + (velocity * deltaTime) + (accelerationTrend * 0.5f * deltaTime * deltaTime);

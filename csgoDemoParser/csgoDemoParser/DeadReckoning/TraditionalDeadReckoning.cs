@@ -9,7 +9,7 @@ namespace csgoDemoParser
     public class TraditionalDeadReckoning
     {
         // The time in seconds allowed for the simulation projection values to interpolate and reconcile with the last known values projection
-        const float blendTime = 0.05f;
+        const float blendTime = 0.15f;
 
         // The maximum distance in game units of the simulated position from the actual position allowed, before a simulated packet update is prompted
         public double Threshold;

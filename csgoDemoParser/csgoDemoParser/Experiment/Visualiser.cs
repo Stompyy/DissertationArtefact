@@ -11,6 +11,7 @@ namespace csgoDemoParser
         int imageWidth, imageHeight;
 
         const int imageScale = 2;
+        const int dotInterval = 10;
 
         const bool drawBackground = true;
         const bool drawDead = true;
@@ -127,6 +128,16 @@ namespace csgoDemoParser
                 VisualisationData startPos = InfernoLevelData.TranslatePositionIntoRenderCoordinates(experiment.actualPositions[i - 1].X, experiment.actualPositions[i - 1].Y, imageWidth, imageHeight);
                 VisualisationData endPos = InfernoLevelData.TranslatePositionIntoRenderCoordinates(experiment.actualPositions[i].X, experiment.actualPositions[i].Y, imageWidth, imageHeight);
 
+                if (i % dotInterval == 0)
+                {
+                    pen.EndCap = System.Drawing.Drawing2D.LineCap.RoundAnchor;
+                }
+                else
+                {
+                    pen.EndCap = System.Drawing.Drawing2D.LineCap.NoAnchor;
+                }
+
+
                 // Draw it
                 returnGraphics.DrawLine(pen,
                     startPos.X,
@@ -137,6 +148,7 @@ namespace csgoDemoParser
             }
 
             pen.Color = Color.Red;
+            pen.EndCap = System.Drawing.Drawing2D.LineCap.RoundAnchor;
 
             // 
             if (drawDead)

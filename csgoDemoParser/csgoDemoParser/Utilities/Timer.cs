@@ -9,7 +9,6 @@ namespace csgoDemoParser
 
         public Timer()
         {
-            // https://www.codeproject.com/Articles/61964/Performance-Tests-Precise-Run-Time-Measurements-wi
             m_Stopwatch = new Stopwatch();
         }
 

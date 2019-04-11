@@ -35,9 +35,10 @@ namespace csgoDemoParser
         public const float framesPerSecond = 60.0f;
 
         // The given thresholds for the prediction algorithms - These will be required to be investigated for best results
-        const double traditionalDRThreshold = 100.0;
-        const double minimumAllowedThreshold = 90.0;
-        const double maximumAllowedThreshold = 110.0;
+        const double traditionalDRThreshold = 20.0;
+
+        const double minimumAllowedThreshold = 5.0;
+        const double maximumAllowedThreshold = 70.0;
 
         // The player path on which the experiment will be carried out
         private PlayerPathLoader m_PlayerPath;
