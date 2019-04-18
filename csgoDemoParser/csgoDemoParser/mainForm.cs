@@ -185,7 +185,7 @@ namespace csgoDemoParser
             {
                 // For the stepped approach, name accordingly, and create the new file each x step
                 // Create the fileName
-                string outputFileName = "velocityColumn." + x + ".csv";
+                string outputFileName = $"velocityColumn.{x}.csv";
                 // and open it. 
                 StreamWriter outputStream = new StreamWriter(outputFileName);
 
@@ -322,6 +322,139 @@ namespace csgoDemoParser
 
             VectorMapPictureBox.Width += scrollValue * zoomStrength;
             VectorMapPictureBox.Height += scrollValue * zoomStrength;
+        }
+
+        private void AutoSamplingExperimentToolStripMenuItem_Button_Click(object sender, EventArgs e)
+        {
+            // choose all path.csv files
+
+            // Displays an OpenFileDialog so the user can select a .csv file.  
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "CSV files|*.csv";
+            openFileDialog.Multiselect = true;
+            openFileDialog.Title = "Select all path.csv files";
+
+            // Show the Dialog. If the user clicked OK in the dialog and a .csv file was selected, open it.  
+            if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                // randomly choose one? many? How choose? rand int?
+                // Time seeded
+                string[] fileNames = openFileDialog.FileNames;
+                string experimentSubject = fileNames[new Random().Next(fileNames.Length)];
+
+                    Timer timer = new Timer();
+                    timer.Start();
+
+                // Keep to this local scope so that garbage collector can dispose of it when out of scope (hopefully)
+                AreaVelocityInfo[,] cumalativeVelocityTable = new AreaVelocityInfo
+                    [Experiment.LevelAxisSubdivisions, Experiment.LevelAxisSubdivisions];
+                // Lengthy init of data structure. Can we not just set default values for our own objects that are not null?
+                for (int x = 0; x < Experiment.LevelAxisSubdivisions; x++)
+                {
+                    for (int y = 0; y < Experiment.LevelAxisSubdivisions; y++)
+                    {
+                        cumalativeVelocityTable[x, y].cumulativeVelocity = new Vector(0.0f);
+
+                        // I think as a numerical value, this already has a default value of 0
+                        cumalativeVelocityTable[x, y].count = 0;
+                    }
+                }
+
+
+                string currentLine;
+                string[] lineItems;
+                int acceptedLines = 0;
+                int rejectedLines = 0;
+                foreach (string fileName in fileNames)
+                {
+                    // Don't include the experimented upon file
+                    if (fileName != experimentSubject)
+                    {
+                        using (StreamReader stringReader = new StreamReader(fileName))
+                        {
+                            // First line is the column headers - ignore
+                            currentLine = stringReader.ReadLine();
+
+                            // Read into trend thing
+                            // CurrentLine will be null when the StreamReader reaches the end of file
+                            while ((currentLine = stringReader.ReadLine()) != null)
+                            {
+                                // Find the playerName from the currentLine
+                                lineItems = currentLine.Split(',');
+
+                                // positionX, positionY from the csv structure as outlined in CSVWriter.cs
+                                int[] lookUpCoords = InfernoLevelData.TranslatePositionIntoLookUpCoordinates(double.Parse(lineItems[2]), double.Parse(lineItems[3]));
+
+                                // Sometimes incomplete lines?
+                                try
+                                {
+                                    // velocityX, velocityY, and velocityZ from the csv structure as outlined in CSVWriter.cs
+                                    cumalativeVelocityTable[lookUpCoords[0], lookUpCoords[1]].cumulativeVelocity += new Vector(lineItems[8], lineItems[9], lineItems[10]);
+                                    cumalativeVelocityTable[lookUpCoords[0], lookUpCoords[1]].count++;
+                                    acceptedLines++;
+                                }
+                                catch
+                                {
+                                    rejectedLines++;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                    timer.Stop();
+
+                // Success message
+                MessageBox.Show("Finished cumulating non-experimented-upon .csv files. " +
+                              $"{timer.GetTimeElapsed()} MS. " +
+                    $"Accepted: {acceptedLines}. " +
+                    $"Rejected: {rejectedLines}. " +
+                    $"Experimented path: {experimentSubject}.",
+                    "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+                // This all feels like there should be less 'new' keywords being used...
+                // Need to ensure that Experiment can properly pick up the averageVelocityTable and use it in the same way as before when deriving it from the database.
+
+
+                // Use the count to calculate the average
+                for (int x = 0; x < Experiment.LevelAxisSubdivisions; x++)
+                {
+                    for (int y = 0; y < Experiment.LevelAxisSubdivisions; y++)
+                    {
+                        if (cumalativeVelocityTable[x, y].count != 0)
+                        {
+                            m_LedReckoningLevelDataTable[x, y] = cumalativeVelocityTable[x, y].cumulativeVelocity / cumalativeVelocityTable[x, y].count;
+                        }
+                        else
+                        {
+                            m_LedReckoningLevelDataTable[x, y] = new Vector(0.0f);
+                        }
+                    }
+                }
+
+                // Do experiment with the chosen path.
+
+                // Singleton reference required for experiment function to see the data
+                m_PlayerPathLoader = new PlayerPathLoader();
+
+                // Zero length path check
+                if(!m_PlayerPathLoader.LoadCSVPath(experimentSubject))
+                {
+                    // Fail message
+                    MessageBox.Show("Non-zero length path randomly selected. Perform experiment again.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    return;
+                }
+
+                // Starts a new experiment with the appropriate previously chosen data
+                Experiment experiment = new Experiment(m_PlayerPathLoader, m_LedReckoningLevelDataTable);
+
+                // Diplays a visual representation into the winforms picture box, and saves the graphics as a .png image in the program's directory
+                m_Visualiser = new Visualiser(VectorMapPictureBox, m_LedReckoningLevelDataTable);
+
+                // Show and save visualisation
+                m_Visualiser.DrawAndSavePathVisualisation(experiment);
+            }
+
         }
 
 

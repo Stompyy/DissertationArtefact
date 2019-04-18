@@ -93,8 +93,10 @@ namespace csgoDemoParser
         /*
          * Load the csv path file into memory
          */
-        private bool LoadCSVPath(string fileName)
+        public bool LoadCSVPath(string fileName)
         {
+            pathName = fileName;
+
             using (StreamReader stringReader = new StreamReader(fileName))
             {
                 // Load the pathfile.csv into memory

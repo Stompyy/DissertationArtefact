@@ -57,6 +57,7 @@
             this.loadMasterCSVIntoMemory_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ZoomScrollBar = new System.Windows.Forms.HScrollBar();
             this.label1 = new System.Windows.Forms.Label();
+            this.AutoSamplingExperimentToolStripMenuItem_Button = new System.Windows.Forms.ToolStripMenuItem();
             this.VectorMapPicturePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VectorMapPictureBox)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -258,7 +259,8 @@
             this.toolStripButton4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.LoadLedReckoningMasterVelocityCSV_ToolStripMenuItem,
             this.loadPlayerPathsToExperimentUponToolStripMenuItem,
-            this.PerformExperiment_ToolStripMenuItem});
+            this.PerformExperiment_ToolStripMenuItem,
+            this.AutoSamplingExperimentToolStripMenuItem_Button});
             this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
@@ -323,6 +325,13 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "Zoom image:";
             // 
+            // AutoSamplingExperimentToolStripMenuItem_Button
+            // 
+            this.AutoSamplingExperimentToolStripMenuItem_Button.Name = "AutoSamplingExperimentToolStripMenuItem_Button";
+            this.AutoSamplingExperimentToolStripMenuItem_Button.Size = new System.Drawing.Size(344, 26);
+            this.AutoSamplingExperimentToolStripMenuItem_Button.Text = "Auto sampling experiment";
+            this.AutoSamplingExperimentToolStripMenuItem_Button.Click += new System.EventHandler(this.AutoSamplingExperimentToolStripMenuItem_Button_Click);
+            // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -373,6 +382,7 @@
         private System.Windows.Forms.ToolStripMenuItem loadMasterCSVIntoMemory_ToolStripMenuItem;
         private System.Windows.Forms.HScrollBar ZoomScrollBar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem AutoSamplingExperimentToolStripMenuItem_Button;
     }
 }
 
