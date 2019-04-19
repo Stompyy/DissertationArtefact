@@ -15,6 +15,9 @@ namespace csgoDemoParser
         // The name of the path being looked at
         public string pathName;
 
+        // The name of the team this player belongs to
+        public string teamName;
+
         // The data structure used to hold a player Path. Where the int key is the frame number, and the string[] value is the parsed player information at that frame
         public Dictionary<int, string[]> pathDictionary;
 
@@ -104,6 +107,22 @@ namespace csgoDemoParser
 
                 // First line is the column headers - ignore
                 string currentLine = stringReader.ReadLine();
+
+                // To get the team name we do one pass, setting the team name variable
+                if ((currentLine = stringReader.ReadLine()) != null)
+                {
+                    // Split the .csv line
+                    string[] splitCurrentLine = currentLine.Split(',');
+
+                    // Set the team name from the frame data
+                    teamName = splitCurrentLine[1];
+
+                    // Populate the dictionary
+                    pathDictionary.Add(frame, splitCurrentLine);
+
+                    // Increment the frame number
+                    frame++;
+                }
 
                 // ReadLine() returns null at the end of the file
                 while ((currentLine = stringReader.ReadLine()) != null)

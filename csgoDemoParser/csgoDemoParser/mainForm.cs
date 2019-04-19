@@ -319,15 +319,16 @@ namespace csgoDemoParser
             int scrollValue = e.NewValue - e.OldValue;
 
             //Add the width and height to the picture box dimensions
-
             VectorMapPictureBox.Width += scrollValue * zoomStrength;
             VectorMapPictureBox.Height += scrollValue * zoomStrength;
         }
 
+        /*
+         * 
+         */
         private void AutoSamplingExperimentToolStripMenuItem_Button_Click(object sender, EventArgs e)
         {
-            // choose all path.csv files
-
+// choose all path.csv files
             // Displays an OpenFileDialog so the user can select a .csv file.  
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "CSV files|*.csv";
@@ -342,12 +343,29 @@ namespace csgoDemoParser
                 string[] fileNames = openFileDialog.FileNames;
                 string experimentSubject = fileNames[new Random().Next(fileNames.Length)];
 
-                    Timer timer = new Timer();
-                    timer.Start();
+                // Get the team from the experiment subject
+                // Filter the sample set? - Further work is to consider what other behaviours may be filtered?
+                // Singleton reference required for experiment function to see the data
+                m_PlayerPathLoader = new PlayerPathLoader();
 
-                // Keep to this local scope so that garbage collector can dispose of it when out of scope (hopefully)
-                AreaVelocityInfo[,] cumalativeVelocityTable = new AreaVelocityInfo
-                    [Experiment.LevelAxisSubdivisions, Experiment.LevelAxisSubdivisions];
+                // Loads in the path and performs a zero length path check
+                if (!m_PlayerPathLoader.LoadCSVPath(experimentSubject))
+                {
+                    // Fail message
+                    MessageBox.Show("Non-zero length path randomly selected. Perform experiment again.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    return;
+                }
+
+                
+
+
+                Timer timer = new Timer();
+                    timer.Start();
+                
+
+// Data structure to accumulate velocities before averaging them
+                AreaVelocityInfo[,] cumalativeVelocityTable = new AreaVelocityInfo[Experiment.LevelAxisSubdivisions, Experiment.LevelAxisSubdivisions];
+
                 // Lengthy init of data structure. Can we not just set default values for our own objects that are not null?
                 for (int x = 0; x < Experiment.LevelAxisSubdivisions; x++)
                 {
@@ -360,7 +378,7 @@ namespace csgoDemoParser
                     }
                 }
 
-
+// Reads through all of the selected path files and accumulates them
                 string currentLine;
                 string[] lineItems;
                 int acceptedLines = 0;
@@ -375,27 +393,39 @@ namespace csgoDemoParser
                             // First line is the column headers - ignore
                             currentLine = stringReader.ReadLine();
 
-                            // Read into trend thing
-                            // CurrentLine will be null when the StreamReader reaches the end of file
-                            while ((currentLine = stringReader.ReadLine()) != null)
+                            // Check if the team name of the currently looked at path matchs the experimentSubject team name
+                            // We only want to build a trend map of the specific team that the subject belongs to
+                            if ((currentLine = stringReader.ReadLine()) != null)
                             {
-                                // Find the playerName from the currentLine
+                                // Split the .csv line
                                 lineItems = currentLine.Split(',');
 
-                                // positionX, positionY from the csv structure as outlined in CSVWriter.cs
-                                int[] lookUpCoords = InfernoLevelData.TranslatePositionIntoLookUpCoordinates(double.Parse(lineItems[2]), double.Parse(lineItems[3]));
+                                if (lineItems[1] == m_PlayerPathLoader.teamName)
+                                {
+                                    do
+                                    {
+                                        // Read into trend thing
+                                        // Split the .csv line
+                                        lineItems = currentLine.Split(',');
 
-                                // Sometimes incomplete lines?
-                                try
-                                {
-                                    // velocityX, velocityY, and velocityZ from the csv structure as outlined in CSVWriter.cs
-                                    cumalativeVelocityTable[lookUpCoords[0], lookUpCoords[1]].cumulativeVelocity += new Vector(lineItems[8], lineItems[9], lineItems[10]);
-                                    cumalativeVelocityTable[lookUpCoords[0], lookUpCoords[1]].count++;
-                                    acceptedLines++;
-                                }
-                                catch
-                                {
-                                    rejectedLines++;
+                                        // positionX, positionY from the csv structure as outlined in CSVWriter.cs
+                                        int[] lookUpCoords = InfernoLevelData.TranslatePositionIntoLookUpCoordinates(double.Parse(lineItems[2]), double.Parse(lineItems[3]));
+
+                                        // Sometimes incomplete lines?
+                                        try
+                                        {
+                                            // velocityX, velocityY, and velocityZ from the csv structure as outlined in CSVWriter.cs
+                                            cumalativeVelocityTable[lookUpCoords[0], lookUpCoords[1]].cumulativeVelocity += new Vector(lineItems[8], lineItems[9], lineItems[10]);
+                                            cumalativeVelocityTable[lookUpCoords[0], lookUpCoords[1]].count++;
+                                            acceptedLines++;
+                                        }
+                                        catch
+                                        {
+                                            rejectedLines++;
+                                        }
+
+                                    // CurrentLine will be null when the StreamReader reaches the end of file
+                                    } while ((currentLine = stringReader.ReadLine()) != null);
                                 }
                             }
                         }
@@ -415,7 +445,7 @@ namespace csgoDemoParser
                 // This all feels like there should be less 'new' keywords being used...
                 // Need to ensure that Experiment can properly pick up the averageVelocityTable and use it in the same way as before when deriving it from the database.
 
-
+// Averages the values and stores them in the trend vector array
                 // Use the count to calculate the average
                 for (int x = 0; x < Experiment.LevelAxisSubdivisions; x++)
                 {
@@ -432,19 +462,7 @@ namespace csgoDemoParser
                     }
                 }
 
-                // Do experiment with the chosen path.
-
-                // Singleton reference required for experiment function to see the data
-                m_PlayerPathLoader = new PlayerPathLoader();
-
-                // Zero length path check
-                if(!m_PlayerPathLoader.LoadCSVPath(experimentSubject))
-                {
-                    // Fail message
-                    MessageBox.Show("Non-zero length path randomly selected. Perform experiment again.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    return;
-                }
-
+// Do experiment with the chosen path.
                 // Starts a new experiment with the appropriate previously chosen data
                 Experiment experiment = new Experiment(m_PlayerPathLoader, m_LedReckoningLevelDataTable);
 
@@ -457,25 +475,15 @@ namespace csgoDemoParser
 
         }
 
-
-
+        
         /*
          * Still need to:
          * 
-         * -- write a function that takes in the csv file on start and stores in an array (? or better data structure)
-         * -- Write a function that takes in the actual position, and returns the 0-Experiment.LevelAxisSubdivisions (x, y) coords for look up
-         * -- Then in LedReckoning.cs look up the trend
          * 
          * - Do stuff with acceleration
          * 
          * - Write the experiment:
-         *      -- Need to update
-         *      - Choose random path files? Random start and end points
-         *      -- Shouldn't be a zero distance path. No point
-         *      -- Output comparison results
          *      
-         *      -- incorporate threshold stuff. Separate experiment?
-         *      -- Like maybe a path long experiment that tracks a frame by frame displacement
          *      - incorporate std dead reckoning protocol like update after 5 secs etc
          *      
          * - Make the damn winforms look better
