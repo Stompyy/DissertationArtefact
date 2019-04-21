@@ -7,11 +7,20 @@ namespace csgoDemoParser
     struct VisualisationData
     {
         public float X, Y;
+        public bool packetUpdate;
 
-        public VisualisationData (float _x, float _y)
+        public VisualisationData (float _x, float _y, bool _packetUpdated)
         {
             this.X = _x;
             this.Y = _y;
+            this.packetUpdate = _packetUpdated;
+        }
+
+        public VisualisationData(float _x, float _y)
+        {
+            this.X = _x;
+            this.Y = _y;
+            this.packetUpdate = false;
         }
     }
 
@@ -37,8 +46,8 @@ namespace csgoDemoParser
         // The given thresholds for the prediction algorithms - These will be required to be investigated for best results
         const double traditionalDRThreshold = 20.0;
 
-        const double minimumAllowedThreshold = 5.0;
-        const double maximumAllowedThreshold = 70.0;
+        const double minimumAllowedThreshold = 10.0;
+        const double maximumAllowedThreshold = 30.0;
 
         // The player path on which the experiment will be carried out
         private PlayerPathLoader m_PlayerPath;
@@ -61,6 +70,7 @@ namespace csgoDemoParser
 
         // The current frame of the simulation
         private int currentFrame;
+        int updates = 0;
 
         /*
          * Constructor of the experiment class triggers an experiment with the loaded data
@@ -189,6 +199,8 @@ namespace csgoDemoParser
             // Dead Reckoning
             //-----------------
 
+            bool dRPacketUpdatePrompted = false;
+
             // Get the dead reckoned position
             Vector deadReckonedPosition = m_TraditionalDeadReckoning.GetDeadReckonedPositionWithVelocityBlending(currentFrame);
 
@@ -199,8 +211,9 @@ namespace csgoDemoParser
             totalDeadReckoningDistanceFromActual += deadReckonedPosDistanceFromActual;
 
             // Check against threshold to decide whether to prompt a packet update
-            if (deadReckonedPosDistanceFromActual > m_TraditionalDeadReckoning.Threshold)
+            if (deadReckonedPosDistanceFromActual > m_TraditionalDeadReckoning.Threshold)// && updates<30)
             {
+                updates++;
                 // Request dead reckoning packet update
                 // Calculate current acceleration as change in velocity divide by time
                 Vector currentAcceleration = (currentVelocity - previousVelocity) / (1.0f / Experiment.framesPerSecond);
@@ -208,17 +221,21 @@ namespace csgoDemoParser
                 m_TraditionalDeadReckoning.SimulatePacketUpdate(
                     currentPosition,
                     currentVelocity,
-                    currentAcceleration,
+                    currentAcceleration,//new Vector(0.0f),//
                     currentFrame
                     );
 
                 // Debug message monitors updates in the csv
-                debug += "dead ";
+                debug += (" dead ");// + currentAcceleration.ToMyEasierSplitString());
+
+                dRPacketUpdatePrompted = true;
             }
 
             //-----------------
             // Led Reckoning
             //-----------------
+
+            bool lRPacketUpdatePrompted = false;
 
             // Get  the led reckoned position
             Vector ledReckonedPosition = m_LedReckoning.GetDeadReckonedPositionWithVelocityBlending(currentFrame);
@@ -239,20 +256,22 @@ namespace csgoDemoParser
                 m_LedReckoning.SimulatePacketUpdate(
                     currentPosition,
                     currentVelocity,
-                    currentAcceleration,
+                    currentAcceleration,//new Vector(0.0f),//
                     currentFrame
                     );
 
                 // Debug message monitors updates in the csv
-                debug += "led ";
+                debug += " led ";
+
+                lRPacketUpdatePrompted = true;
             }
 
             // Additional debug information - need to fine tune the minimum and maximum values for the LedReckoning threshold
             debug += "," + m_LedReckoning.Threshold.ToString();
 
-            actualPositions[currentFrame] = new VisualisationData(currentPosition.X, currentPosition.Y);
-            deadReckonedPositions[currentFrame] = new VisualisationData(deadReckonedPosition.X, deadReckonedPosition.Y);
-            ledReckonedPositions[currentFrame] = new VisualisationData(ledReckonedPosition.X, ledReckonedPosition.Y);
+            actualPositions[currentFrame] = new VisualisationData(currentPosition.X, currentPosition.Y, false);
+            deadReckonedPositions[currentFrame] = new VisualisationData(deadReckonedPosition.X, deadReckonedPosition.Y, dRPacketUpdatePrompted);
+            ledReckonedPositions[currentFrame] = new VisualisationData(ledReckonedPosition.X, ledReckonedPosition.Y, lRPacketUpdatePrompted);
 
             // Construct the return string
             return currentFrame + "," +

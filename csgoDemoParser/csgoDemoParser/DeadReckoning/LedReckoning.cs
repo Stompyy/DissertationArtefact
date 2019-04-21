@@ -40,7 +40,8 @@ namespace csgoDemoParser
          * This threshold is calculated with accordance to the current velocity trend.
          */
         public new double Threshold
-        { get
+        {
+            get
             {
                 // Should this take magnitude into account also... areas of near zero overall velocity trend should not as be subject
                 // Vector length is the velocity so just 
@@ -59,6 +60,7 @@ namespace csgoDemoParser
                 else
                 {
                     // Default confidence is the uncommitted midpoint between 0 - 1.
+                    compliance = 0.5f;
                     confidence = 0.5f;
                 }
 
@@ -75,10 +77,18 @@ namespace csgoDemoParser
             // I think this may need to look at the actual changes in velocity not the velocity trend
             // Adjust the acceleration in line with the velocity trend data
             // Attempts to push the simulation towards the velocity trend by finding the average of the last known acceleration and the velocityTrend compliance
-            Vector accelerationTrend = (lastKnownAcceleration + velocityTrend * compliance) / 2.0f; //
+            Vector accelerationTrend = lastKnownAcceleration + velocityTrend * compliance;
 
             // Second order derivitive prediction using Newtonian laws of motion
-            return startingPosition + (velocity * deltaTime) + (accelerationTrend * 0.5f * deltaTime * deltaTime);
+            return startingPosition + (velocity * deltaTime) + (lastKnownAcceleration * 0.5f * deltaTime * deltaTime);
+        }
+
+        protected override float blendTime
+        {
+            get
+            {
+                return (float)(80.0 / Threshold) / Experiment.framesPerSecond;
+            }
         }
 
         /*
@@ -91,6 +101,9 @@ namespace csgoDemoParser
 
             //  Look at the rounded down int value
             Vector lowerBound = m_LedReckoningLevelDataTable[lookUpCoords[0], lookUpCoords[1]];
+
+            return lowerBound;
+
 
             // Look at the rounded up int value
             Vector upperBound = m_LedReckoningLevelDataTable[lookUpCoords[0] + 1, lookUpCoords[1] + 1];

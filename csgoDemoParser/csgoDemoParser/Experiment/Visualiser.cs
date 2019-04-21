@@ -82,10 +82,10 @@ namespace csgoDemoParser
                     {
                         // Set the colour as a grayscale currently ish (/2)
                         pen.Color = Color.FromArgb(
-                            128,
-                            (int)velocityTrend.Length / 2,
-                            (int)velocityTrend.Length / 2,
-                            (int)velocityTrend.Length / 2);
+                            64, 0, 0, 0);
+                    //        (int)velocityTrend.Length / 2,
+                    //        (int)velocityTrend.Length / 2,
+                    //        (int)velocityTrend.Length / 2);
 
                         // Start drawing from the centre of the tile
                         float startX = (x + 0.5f) * xStep;
@@ -93,7 +93,7 @@ namespace csgoDemoParser
 
                         // * Step / (2.0f * maxSize) limits the draw to the edge of the tile
                         float endX = startX + (velocityTrend.X * xStep / (0.1f * maxSize));
-                        float endY = startY + (velocityTrend.Y * yStep / (0.1f * maxSize));
+                        float endY = startY - (velocityTrend.Y * yStep / (0.1f * maxSize));
 
                         // Draw it
                         returnGraphics.DrawLine(pen, startX, startY, endX, endY);
@@ -128,7 +128,7 @@ namespace csgoDemoParser
                 VisualisationData startPos = InfernoLevelData.TranslatePositionIntoRenderCoordinates(experiment.actualPositions[i - 1].X, experiment.actualPositions[i - 1].Y, imageWidth, imageHeight);
                 VisualisationData endPos = InfernoLevelData.TranslatePositionIntoRenderCoordinates(experiment.actualPositions[i].X, experiment.actualPositions[i].Y, imageWidth, imageHeight);
 
-                if (i % dotInterval == 0)
+                if (experiment.deadReckonedPositions[i].packetUpdate)//i % dotInterval == 0)
                 {
                     pen.EndCap = System.Drawing.Drawing2D.LineCap.RoundAnchor;
                 }
@@ -158,6 +158,16 @@ namespace csgoDemoParser
                     VisualisationData startPos = InfernoLevelData.TranslatePositionIntoRenderCoordinates(experiment.deadReckonedPositions[i - 1].X, experiment.deadReckonedPositions[i - 1].Y, imageWidth, imageHeight);
                     VisualisationData endPos = InfernoLevelData.TranslatePositionIntoRenderCoordinates(experiment.deadReckonedPositions[i].X, experiment.deadReckonedPositions[i].Y, imageWidth, imageHeight);
 
+                    if (experiment.deadReckonedPositions[i].packetUpdate)//i % dotInterval == 0)//
+                    {
+                        pen.EndCap = System.Drawing.Drawing2D.LineCap.RoundAnchor;
+                    }
+                    else
+                    {
+                        pen.EndCap = System.Drawing.Drawing2D.LineCap.NoAnchor;// SquareAnchor; //
+                    }
+
+
                     // Draw it
                     returnGraphics.DrawLine(pen,
                         startPos.X,
@@ -177,6 +187,15 @@ namespace csgoDemoParser
                 {
                     VisualisationData startPos = InfernoLevelData.TranslatePositionIntoRenderCoordinates(experiment.ledReckonedPositions[i - 1].X, experiment.ledReckonedPositions[i - 1].Y, imageWidth, imageHeight);
                     VisualisationData endPos = InfernoLevelData.TranslatePositionIntoRenderCoordinates(experiment.ledReckonedPositions[i].X, experiment.ledReckonedPositions[i].Y, imageWidth, imageHeight);
+
+                    if (experiment.ledReckonedPositions[i].packetUpdate)
+                    {
+                        pen.EndCap = System.Drawing.Drawing2D.LineCap.RoundAnchor;
+                    }
+                    else
+                    {
+                        pen.EndCap = System.Drawing.Drawing2D.LineCap.NoAnchor;
+                    }
 
                     // Draw it
                     returnGraphics.DrawLine(pen,

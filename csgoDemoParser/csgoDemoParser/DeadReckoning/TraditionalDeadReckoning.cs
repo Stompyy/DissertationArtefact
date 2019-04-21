@@ -9,10 +9,18 @@ namespace csgoDemoParser
     public class TraditionalDeadReckoning
     {
         // The time in seconds allowed for the simulation projection values to interpolate and reconcile with the last known values projection
-        const float blendTime = 0.15f;
+    //    const float blendTime = (4.0f / Experiment.framesPerSecond);//0.15f;
 
         // The maximum distance in game units of the simulated position from the actual position allowed, before a simulated packet update is prompted
         public double Threshold;
+
+        protected virtual float blendTime
+        {
+            get
+            {
+                return (float)(80.0 / Threshold) / Experiment.framesPerSecond;
+            }
+        }
 
         // Needed values for the simulation
         public Vector
@@ -43,7 +51,7 @@ namespace csgoDemoParser
             projectedPositionAtLastUpdate = initialPosition;
             deadReckonedPosition = initialPosition;
 
-            // Initialise all Velocity and acceleration values to zero
+            // Initialise all velocity and acceleration values to zero
             lastKnownVelocity = new Vector(0.0f);
             simulatedVelocity = new Vector(0.0f);
             lastKnownAcceleration = new Vector(0.0f);
@@ -60,10 +68,15 @@ namespace csgoDemoParser
         /*
          * Uses Newtonian motion equation to get a simulated position based off the last known position
          * 
-         * public accessor allows new keyword in derived classes for different functionality
+         * protected virtual allows protected override in derived classes for different functionality
          */
         protected virtual Vector GetProjectedPosition(Vector startingPosition, Vector velocity, float deltaTime)
         {
+            Vector vt = velocity * deltaTime;
+            Vector at2 = lastKnownAcceleration * 0.5f * deltaTime * deltaTime;
+            Vector deltaPos = vt + at2;
+            double deltaDist = deltaPos.Length;
+
             // Second order derivitive prediction using Newtonian laws of motion
             return startingPosition + (velocity * deltaTime) + (lastKnownAcceleration * 0.5f * deltaTime * deltaTime);
         }
@@ -77,12 +90,16 @@ namespace csgoDemoParser
             float deltaTime = (float)(predictionTime - lastKnownTime);
             deltaTime /= Experiment.framesPerSecond;
 
-            // Run Newton algorithm on last known real values to give a vector poition for our simulation to interpolate towards
+            // Run Newton algorithm on last known real values to give a vector position for our simulation to interpolate towards
             Vector projectionUsingLastKnownValues = GetProjectedPosition(
                 lastKnownPosition,
-                lastKnownVelocity,
+                lastKnownVelocity * 4.0f,
                 deltaTime
                 );
+
+            // THIS SIM VELOCITY IS NOT REFLECTING THE POSITION BLEND!!!
+            // THEREFORE NO WARMING UP, NO WARMING DOWN, AND ABRUPT CHANGES IN DIRECTION!!!
+            // oR ALWAYS HAVE IT BLENDING?
 
             // Do Velocity blending between current game simulation velocity and last known velocity
             simulatedVelocity = VectorBlend(projectedVelocityAtLastUpdate, lastKnownVelocity, deltaTime);
@@ -90,12 +107,14 @@ namespace csgoDemoParser
             // Run Newton algorithm using blended velocity upon the projection data
             Vector projectionUsingSimulationValues = GetProjectedPosition(
                 projectedPositionAtLastUpdate,
-                simulatedVelocity,
+                simulatedVelocity * 4.0f,
                 deltaTime
                 );
 
             // Interpolate using Vector blend between simulation projection towards the projection using the lastt known values
-            return deadReckonedPosition = VectorBlend(projectionUsingSimulationValues, projectionUsingLastKnownValues, deltaTime);
+            deadReckonedPosition = VectorBlend(projectionUsingSimulationValues, projectionUsingLastKnownValues, deltaTime);
+
+            return deadReckonedPosition; //projectionUsingLastKnownValues;// 
         }
 
         /*
@@ -106,7 +125,7 @@ namespace csgoDemoParser
             // Clamp between zero to one to avoid overshooting the target blend amount
             float blendWeight =  ClampZeroToOne(deltaTime / blendTime);
 
-            // Beturn the blended Vector between simulatedVelocity and actualVelocity
+            // Return the blended Vector between startVector and targetVector
             return startVector + (targetVector - startVector) * blendWeight;
         }
 
@@ -135,7 +154,7 @@ namespace csgoDemoParser
             projectedPositionAtLastUpdate = deadReckonedPosition;
             projectedVelocityAtLastUpdate = simulatedVelocity;
 
-            // Also increments the number of updates that this siulation has used as a measure of simulation accuracy
+            // Also increments the number of updates that this simulation has used as a measure of simulation accuracy
             numberOfUpdatesNeeded++;
         }
     }
