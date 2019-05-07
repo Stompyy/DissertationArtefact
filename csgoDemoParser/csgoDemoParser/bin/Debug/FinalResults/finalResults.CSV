@@ -1,0 +1,501 @@
+PathName,NumFrames,Average dead reckoned error distance,DeadUpdates,Average led reckoned error distance,LedUpdates
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\334_natus-vincere-team-ldlc_de_inferno.player1.path31.csv,1508,18.7960867113703,677,16.7914005277555,328
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\334_natus-vincere-team-ldlc_de_inferno.player3.path30.csv,4262,15.1206236860539,1564,14.1885835674223,913
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\334_natus-vincere-team-ldlc_de_inferno.player9.path11.csv,3172,20.7424003853462,1572,20.4723841731532,1244
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\2799_R1_1406587232.player1.path34.csv,1735,12.1869829642902,400,12.5387508362469,258
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\2799_R1_1406587232.player3.path20.csv,650,2.86149440357032,39,3.38844809389113,23
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\2799_R1_1406587232.player3.path39.csv,892,14.4606851440491,324,15.1715147647398,197
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\2799_R1_1406587232.player5.path14.csv,1328,12.4060281114545,332,14.8364018033797,262
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\2799_R2_1406586816.player4.path11.csv,1420,9.9103482883381,232,11.6136947846569,272
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\2799_R2_1406586816.player4.path30.csv,1516,11.8175577126164,353,13.7319298109505,327
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\2799_R2_1406586816.player5.path22.csv,771,11.2405175468079,182,12.6858602498278,102
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\2799_R2_1406586816.player6.path4.csv,1238,10.2740663691243,259,11.8602077177517,171
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\2799_R2_1406586816.player7.path14.csv,1288,12.4704664657276,319,14.9412378048851,218
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\2799_R2_1406587141.player0.path30.csv,1390,11.8873128567209,271,13.196401857303,210
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\2799_R2_1406587141.player5.path21.csv,617,10.3388965277545,122,12.7686232688005,89
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\2799_R2_1406587141.player5.path34.csv,1826,13.6744268220528,513,15.3299958323865,350
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\2799_R2_1406587141.player7.path28.csv,1309,11.1187315434715,237,13.3482349420408,166
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\2799_R2_1406587141.player8.path13.csv,1041,12.7094840397723,304,13.4054989235365,199
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\2799_R2_1406587141.player9.path20.csv,708,11.1399455687202,146,12.5485814166306,118
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3996_R1_fnatic_Wizards.player0.path12.csv,1376,11.6032905510927,275,13.2143997990786,287
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3996_R1_fnatic_Wizards.player1.path12.csv,1284,12.9350223806504,334,15.0170224294938,246
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3996_R1_fnatic_Wizards.player7.path14.csv,1376,13.0605518931858,327,13.9298681102943,213
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3996_R1_fnatic_Wizards.player7.path19.csv,1868,11.2669264179885,374,12.9085391734622,259
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3996_R1_Team Dign_Ninjas in.player2.path32.csv,585,9.68263214780343,88,11.171573893652,35
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3996_R1_Team Dign_Team LDLC.player0.path16.csv,520,10.668943999955,117,11.6815958135567,59
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3996_R1_Team Dign_Team LDLC.player4.path7.csv,966,11.668347736703,196,13.2368940772407,143
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3996_R1_Team Dign_Team LDLC.player5.path10.csv,2459,9.03331352120323,359,10.5312377859871,291
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3996_R1_Team Dign_Team LDLC.player5.path13.csv,1194,13.4339443776427,297,16.9850297905536,341
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3996_R1_Team Dign_Team LDLC.player8.path22.csv,723,11.6946904224986,173,14.0906844451346,130
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3996_R1_Team Dign_Virtus Pr.player1.path35.csv,1304,11.4169660158658,279,13.497802402853,305
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3996_R1_Team Dign_Virtus Pr.player2.path33.csv,1664,12.6564996546206,329,14.9790248818477,261
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3996_R1_Team Dign_Virtus Pr.player9.path7.csv,1934,12.6536647537245,492,14.0356800953279,290
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3996_R1_Team Dign_Virtus Pr.player9.path16.csv,1581,14.6826604934026,537,16.3880673839324,339
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3996_R1_Team Dign_Virtus Pr.player9.path33.csv,1267,10.8744846640406,257,11.7472816165901,181
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3996_R1_Team LDLC_Virtus Pr.player1.path22.csv,1039,13.0855477194817,295,13.9633133039577,260
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3996_R1_Team LDLC_Virtus Pr.player2.path20.csv,1270,13.4644625383355,317,14.8793538423882,208
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3996_R1_Team LDLC_Virtus Pr.player4.path19.csv,416,8.47824197756052,67,9.02778554192723,42
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3996_R1_Team LDLC_Virtus Pr.player5.path8.csv,515,9.26163069588461,84,11.1210686838688,54
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3996_R1_Wizards_Titan.player0.path21.csv,1121,13.2816849678498,320,14.7842985786164,242
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3996_R1_Wizards_Titan.player1.path9.csv,1488,10.5965699768269,254,12.0391623741014,262
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3998_R1_1406554410.player7.path14.csv,742,12.2752442388636,190,13.740754785614,140
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3998_R1_1406554410.player9.path20.csv,1448,15.538178677269,532,17.0243020462787,392
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3998_R1_1406554754.player2.path34.csv,1066,11.5508706789688,208,12.9290721491654,143
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3998_R1_1406554754.player4.path22.csv,509,9.43786927418198,100,10.9139602105281,60
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3998_R1_1406554754.player5.path21.csv,974,10.9254711490809,232,12.0577602255654,172
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3998_R1_1406554754.player9.path29.csv,1166,11.7188908636188,277,12.2772313834348,243
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3998_R1_Team Dign_Virtus Pr.player5.path16.csv,1614,12.8270564682008,358,14.8714925119386,278
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\3998_R1_Team Dign_Virtus Pr.player7.path11.csv,4631,4.39639414531513,414,4.8986181837722,315
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4000_R1_Epsilon_Berzerk.player6.path27.csv,5495,6.88846763437364,1136,7.98759107271632,786
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4000_R1_Epsilon_Berzerk.player8.path10.csv,2423,15.4143619624188,1249,16.8471442314619,498
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4000_R1_Ninjas in_Berzerk.player1.path31.csv,2158,16.3989039696027,1144,17.1894746865582,436
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4000_R1_Ninjas in_Berzerk.player2.path2.csv,429,21.7568099301891,327,21.6239570025642,119
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4000_R1_Publiclir_Berzerk.player6.path1.csv,462,18.5776605680213,269,19.6244099733725,111
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4001_R1_1406398538.player0.path13.csv,2862,13.2007795827188,919,17.1197751834702,519
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4001_R1_1406398538.player1.path24.csv,827,11.1358679252671,324,12.5050133972998,106
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4001_R1_1406398538.player1.path25.csv,2391,14.9585382866005,832,17.3268585926464,640
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4001_R1_1406398538.player3.path12.csv,2287,16.6015727773508,975,17.8872337595468,508
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4001_R1_1406398538.player3.path25.csv,907,15.0961318729736,423,16.3410707337452,126
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4001_R1_1406398538.player5.path21.csv,1782,13.3548847019803,652,14.908683656986,339
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4001_R1_1406398538.player5.path25.csv,1395,15.9998574114575,761,17.0184841086077,269
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4001_R1_1406398538.player7.path8.csv,2551,15.3152650174801,1040,17.2961734484368,535
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4001_R1_1406398538.player8.path13.csv,3357,16.0216684633476,1510,18.4738168538685,898
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4001_R1_fnatic_SK Gaming.player1.path24.csv,2423,11.9715334269654,864,13.071598839766,422
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4001_R1_fnatic_SK Gaming.player3.path0.csv,1515,12.7759071715103,659,13.8038975262411,257
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4001_R1_fnatic_SK Gaming.player4.path6.csv,3260,14.8516165632756,1433,16.3515330704,606
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4001_R1_fnatic_SK Gaming.player7.path14.csv,1708,14.1979736185168,641,16.1478985873523,335
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4002_R1_HellRaise_Reason Ga.player7.path12.csv,3065,15.3610324847515,1236,17.0452632105909,654
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4002_R1_HellRaise_Reason Ga.player8.path6.csv,326,19.2878087621279,213,20.1294490063664,46
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4002_R1_HellRaise_Reason Ga.player9.path15.csv,946,14.4682626445585,497,14.7264549892367,172
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4002_R1_TitanCS_o4o.player2.path12.csv,1416,15.5084264307546,623,16.6696322666634,333
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4002_R1_TitanCS_o4o.player4.path15.csv,1813,12.9746207221579,574,15.4513931598813,348
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4004_R1_1406400555.player0.path4.csv,476,22.0766011176114,381,22.5603430163916,103
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4004_R1_1406400555.player0.path28.csv,2754,11.6565717162297,888,13.5593925431342,513
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4004_R1_1406400555.player4.path6.csv,1985,11.644649136157,585,12.5345026491537,250
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4004_R1_1406400555.player7.path18.csv,3639,16.3903492710516,1641,18.6613760660026,821
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4004_R1_1406400555.player8.path28.csv,836,13.6970861445108,318,14.9869430807136,83
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4004_R1_HellRaise_SK Gaming.player0.path25.csv,1710,13.9516695607051,659,16.5960502024893,381
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4004_R1_HellRaise_SK Gaming.player1.path13.csv,835,13.2977527234466,364,14.0086983142595,106
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4004_R1_HellRaise_SK Gaming.player5.path11.csv,2063,16.8886795365636,1055,18.2577486860286,434
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4004_R1_Virtus Pr_Natus Vin.player0.path19.csv,2266,9.94758594927503,648,10.9845740760004,335
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4004_R1_Virtus Pr_Natus Vin.player8.path9.csv,3905,14.8403059560504,1634,16.6580757997362,862
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4004_R1_Virtus Pr_Natus Vin.player8.path11.csv,1975,16.1412390846183,938,18.2056998005935,544
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4004_R1_Virtus Pr_Natus Vin.player9.path9.csv,2683,16.9539371532535,1342,18.8840363716008,586
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4004_R2_Epsilon_Natus Vin.player0.path27.csv,1084,16.3331112171768,658,16.9000500238705,195
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4004_R2_Epsilon_Natus Vin.player3.path24.csv,2715,13.5891460367798,837,15.3884633681404,435
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4004_R3_1406401160.player4.path11.csv,1217,14.6933929330658,519,15.7257657969391,291
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4063_R1_fnatic_Berzerk.player2.path12.csv,1749,12.6481369104173,410,14.4478547308899,389
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4063_R1_fnatic_Berzerk.player2.path21.csv,519,10.1772841996706,114,11.7938782176577,92
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4063_R1_HellRaise_OnlineBOT.player2.path39.csv,749,11.7942644913816,166,12.8689473861448,164
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4063_R1_HellRaise_OnlineBOT.player9.path12.csv,1497,12.8627867934306,372,14.9732257539732,226
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4063_R1_HellRaise_Virtus Pr.player0.path1.csv,770,12.7294788413123,226,14.0557209017915,133
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4063_R1_HellRaise_Virtus Pr.player5.path14.csv,1411,12.5176892254289,323,13.5354908571949,347
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4063_R1_HellRaise_Virtus Pr.player9.path9.csv,836,6.29786174040006,85,7.50247393039047,90
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4063_R1_Reason Ga_Berzerk.player5.path20.csv,1786,10.7954093793801,298,11.5438914221405,323
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4063_R1_Reason Ga_Berzerk.player8.path6.csv,1425,8.73858390751596,241,9.93667989727392,236
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4063_R1_Reason Ga_Virtus Pr.player7.path18.csv,833,11.8297227816303,206,12.1573013544165,113
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4063_R1_Team LDLC_fnatic.player1.path28.csv,840,11.9599245836579,223,12.8261614011704,156
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4063_R1_Team LDLC_fnatic.player3.path13.csv,1369,13.4974969291905,280,14.6395999593658,180
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4063_R1_Team LDLC_fnatic.player5.path14.csv,447,10.4365670323779,103,11.4652745645408,48
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4063_R1_Team LDLC_fnatic.player5.path30.csv,447,8.02513372949838,51,10.1836871485083,79
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4063_R1_Team LDLC_fnatic.player7.path9.csv,1426,11.6755736776933,313,12.860898805495,210
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4063_R1_Team LDLC_HellRaise.player8.path27.csv,1170,10.5856975215357,251,12.3165351180423,232
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4063_R1_Team LDLC_USSR.player3.path2.csv,550,10.1893107288596,125,12.3673200464745,77
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4063_R1_TitanCS_fnatic.player9.path22.csv,1217,13.2776821568014,350,15.4029668589689,314
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4063_R1_USSR_OnlineBOT.player1.path37.csv,1063,11.5233642251963,242,14.3834081418292,221
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4063_R1_Virtus Pr_Berzerk.player0.path21.csv,1729,8.64622001937491,256,9.53536334444502,221
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4063_R1_Virtus Pr_Berzerk.player4.path22.csv,583,9.52324062124518,108,10.3629698500591,60
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4063_R1_Virtus Pr_Berzerk.player7.path17.csv,1244,12.7758051715253,305,14.8993244049215,299
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4063_R1_Virtus Pr_Berzerk.player8.path13.csv,1214,14.2148198604091,369,15.7438654881158,305
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4063_R1_Virtus Pr_Berzerk.player9.path17.csv,1041,11.5643526168687,235,13.1915762055869,183
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4063_R1_Virtus Pr_Berzerk.player9.path24.csv,935,11.8715633461777,231,14.6829288908211,233
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4064_R1_1409475105.player0.path32.csv,1820,11.1909158977924,377,12.4639338185946,299
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4064_R1_1409475105.player3.path30.csv,1684,12.8497960548964,410,14.8424109869798,284
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4064_R1_1409475105.player5.path23.csv,446,6.8223443603642,46,8.27659292735443,29
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4064_R1_1409486699.player0.path2.csv,397,5.6967519733268,49,6.85277487198739,33
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4064_R1_1409486699.player0.path6.csv,2002,10.2387573519009,378,11.8777770722394,276
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4064_R1_1409486699.player0.path28.csv,752,9.1749988099745,111,10.9800370398466,129
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4064_R1_1409486699.player2.path8.csv,1922,12.114889602775,414,13.8303554758308,276
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4064_R1_1409486699.player8.path9.csv,1427,7.20241711293762,213,7.90377663905127,129
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4064_R1_1409514179.player1.path22.csv,813,8.58439165562481,133,9.63101395026007,85
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4064_R1_1409514179.player4.path23.csv,1420,9.79691582911049,214,11.1054255235942,258
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4064_R2_1409475752.player2.path36.csv,777,7.73319181505988,107,8.04168885586305,76
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4064_R2_1409475752.player6.path21.csv,2170,13.2927739842183,542,15.0812707286767,515
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4064_R2_1409475752.player8.path13.csv,508,9.53576355418521,107,10.9285081590966,60
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4064_R2_1409499209.player2.path29.csv,1569,9.95609569264658,188,10.7582903877567,234
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4064_R2_1409499209.player8.path26.csv,556,8.04470330340097,87,8.81963613256297,74
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4078_R1_1406390437.player3.path24.csv,1836,12.2462236793162,413,14.5570296355521,332
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4078_R1_1406390437.player4.path9.csv,2196,13.1989829280761,618,15.4800724399743,556
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4078_R1_1406390437.player4.path20.csv,1431,13.2114618686182,405,13.8989917761033,375
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4078_R1_1406390437.player6.path16.csv,1139,10.6849263454414,250,12.1363238537343,184
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4078_R1_1406390437.player8.path19.csv,1244,12.1143123396225,316,13.4556144692263,279
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4078_R1_LGB eSpor_fnatic.player5.path7.csv,1415,11.3851565670868,301,12.9929946753369,332
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4078_R1_LGB eSpor_fnatic.player5.path12.csv,1469,6.65410768602851,160,7.48513215261899,117
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4078_R1_LGB eSpor_fnatic.player9.path23.csv,1518,12.6492541581795,393,14.2659867019463,256
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4078_R1_LGB eSpor_fnatic.player9.path27.csv,1802,12.1042274106672,422,12.9731659568579,303
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4078_R2_Ninjas in_Team Dign.player2.path8.csv,1744,10.6356620351051,275,11.8958492783795,377
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4078_R2_Ninjas in_Team Dign.player4.path4.csv,440,16.3314443534088,172,18.7046152019297,122
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4078_R2_Ninjas in_Team Dign.player4.path11.csv,1735,13.2916784336491,444,15.1071742883783,242
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4078_R2_Ninjas in_Team Dign.player7.path0.csv,1503,17.7790683729503,607,21.0626922109051,387
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4078_R2_Ninjas in_Team Dign.player8.path0.csv,759,15.5616362245415,281,17.5336482937808,202
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4078_R2_Ninjas in_Team Dign.player8.path8.csv,1747,12.360929836131,399,13.9518376103835,301
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4078_R2_Virtus Pr_LGB eSpor.player6.path16.csv,1803,13.4358386416814,493,14.8370858515478,334
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4078_R2_Virtus Pr_LGB eSpor.player8.path24.csv,1193,10.9885353342624,220,13.1256009600646,244
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4078_R3_1406390991.player2.path23.csv,1160,10.5641725818707,244,12.2402719258014,263
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4078_R3_1406390991.player9.path14.csv,1545,13.1641211177799,405,15.3493966916739,319
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4080_R1_Clan-Myst_fnatic.player1.path15.csv,904,12.1887243649159,227,14.3302544708567,158
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4080_R1_Clan-Myst_fnatic.player6.path30.csv,1799,13.0677273488495,484,14.9570551542821,349
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4080_R1_LGB eSpor_Clan-Myst.player4.path3.csv,1309,12.0859777289463,322,14.6139020013702,212
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4080_R1_LGB eSpor_Clan-Myst.player4.path9.csv,1788,13.8934919507757,516,15.2187466570899,306
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4080_R1_LGB eSpor_Clan-Myst.player5.path15.csv,1511,10.4580532891813,281,12.5213592992426,261
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4080_R1_LGB eSpor_Clan-Myst.player6.path11.csv,1019,11.0436773839972,212,12.7386979763785,212
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4080_R1_LGB eSpor_Clan-Myst.player8.path13.csv,2448,8.35877311721558,424,9.61868577919387,382
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4081_R1_Ninjas in_Recursive.player1.path25.csv,875,13.475984813538,266,15.0965033645967,200
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4081_R1_Ninjas in_Recursive.player2.path18.csv,709,9.04851142942301,91,11.0085939430648,61
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4081_R1_Ninjas in_Recursive.player2.path23.csv,987,10.3412382685298,149,11.3792087513894,112
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4081_R1_Ninjas in_Recursive.player2.path25.csv,1879,11.7783674172265,376,13.5239177199936,328
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4081_R1_Ninjas in_Recursive.player3.path9.csv,1460,13.3513012646299,401,14.9701872597333,286
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4081_R1_Ninjas in_Recursive.player6.path29.csv,1533,11.8069044076799,350,13.8071314612609,254
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4081_R1_Ninjas in_Recursive.player8.path18.csv,1950,13.5000517155445,526,15.5088542946295,376
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4081_R1_Ninjas in_Recursive.player9.path14.csv,1548,13.2624504504215,442,14.9398657185717,352
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4081_R1_Ninjas in_Universal.player9.path12.csv,1466,13.4784399766375,434,15.4385622730063,324
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4081_R1_Recursive_iBUYPOWER.player0.path17.csv,2230,11.9628336413905,540,13.9580507759135,535
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4081_R1_Recursive_iBUYPOWER.player1.path23.csv,870,11.0383561918969,188,11.7908656171825,108
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4081_R1_Recursive_iBUYPOWER.player1.path25.csv,1506,12.760030664414,347,14.3831450600729,318
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4081_R1_Recursive_iBUYPOWER.player2.path6.csv,2140,13.1300685252132,544,15.4902931815112,417
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4081_R1_Recursive_iBUYPOWER.player3.path1.csv,662,15.2412685330659,201,17.4032812629307,88
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4081_R1_Recursive_iBUYPOWER.player8.path23.csv,779,11.4031474224591,198,12.6748388594091,136
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4081_R1_Recursive_Universal.player0.path20.csv,1521,12.5313274289692,335,14.4671178022953,181
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4081_R1_Recursive_Universal.player2.path15.csv,784,11.9378422899727,188,13.3479901770366,86
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4081_R1_Recursive_Universal.player3.path12.csv,908,11.3291595381026,193,11.6936987685619,116
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4081_R1_Recursive_Universal.player3.path19.csv,1937,10.1231886221915,394,11.6132830866478,359
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4081_R1_Recursive_Universal.player8.path5.csv,880,11.5995260898679,219,13.572419494012,162
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4082_R1_Team Very_compLexit.player1.path18.csv,464,6.88887784404005,59,7.65892500233405,31
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4082_R1_Team Very_compLexit.player5.path14.csv,1810,14.1806578446449,588,15.8438440754384,447
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4082_R1_Team Very_compLexit.player8.path20.csv,1050,12.7667117177184,283,14.4205799397215,185
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4082_R1_Team Very_compLexit.player9.path10.csv,1315,12.5204530406805,317,13.6505381686734,256
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4082_R1_Team Very_Xapso.player0.path2.csv,355,16.6764025832644,110,18.8615186043656,54
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4082_R1_Team Very_Xapso.player0.path11.csv,1551,12.9387623442517,444,14.2145338308004,306
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4082_R1_Team Very_Xapso.player4.path17.csv,3325,3.92491406100543,255,4.37625414832873,182
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4082_R1_Team Very_Xapso.player6.path0.csv,773,14.8185751275959,207,16.9370597357131,133
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4083_R1_Astana Dr_Reason Ga.player4.path16.csv,1556,11.8395931968893,309,12.9677035647365,235
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4083_R1_Reason Ga_SK Gaming.player5.path11.csv,2218,12.5245186043268,480,14.2871882313501,617
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4083_R1_Reason Ga_SK Gaming.player7.path17.csv,525,8.36665549729257,77,9.9529920409629,40
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4083_R1_SK Gaming_CPH Wolve.player9.path13.csv,1599,12.5572332127572,401,13.9799326321491,294
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4084_R1_1406236021.player1.path21.csv,1028,12.8944081101718,285,14.3081462103358,212
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4084_R1_1406236021.player3.path10.csv,1510,13.6824820909149,439,14.861224015901,326
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4084_R1_1406236021.player8.path31.csv,2351,13.4959170703153,640,15.9124523297801,466
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4084_R1_1406237252.player2.path1.csv,1143,8.13127292589291,197,11.6607656605615,214
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4084_R1_1406237252.player5.path15.csv,1373,11.5975175789391,286,13.5263571139362,196
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4084_R1_fnatic_Recursive.player3.path8.csv,1503,12.631202110348,358,13.8914665320383,237
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4084_R1_fnatic_Recursive.player3.path32.csv,1122,11.5295650246536,263,13.6142507883267,238
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4084_R1_fnatic_Recursive.player4.path25.csv,905,11.3934648135043,183,12.9787186236083,106
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4084_R1_fnatic_Recursive.player8.path18.csv,1790,13.7926661097647,489,15.8584417518093,483
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4084_R2_1406239464.player4.path8.csv,1367,13.3356080909584,390,15.1598152411409,296
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4084_R2_1406239464.player8.path18.csv,679,9.69402768716088,147,10.6767299329496,84
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4084_R2_1406241480.player3.path18.csv,1586,12.805487257007,372,15.5783573772582,299
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4084_R2_1406241480.player4.path22.csv,983,12.2217562262799,229,13.4870237682177,154
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4084_R3_fnatic_Ninjas in.player2.path30.csv,609,8.21356460895259,97,9.99086287181043,68
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4084_R3_fnatic_Ninjas in.player7.path1.csv,405,6.55042246770277,73,7.40822525127022,37
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4084_R3_fnatic_Ninjas in.player9.path15.csv,1533,12.7184843698362,379,14.9741190973341,262
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4148_R1_1406604099.player0.path32.csv,1526,12.6888652296877,355,14.6240144589971,257
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4148_R1_1406604099.player4.path2.csv,402,16.7959351903265,169,19.0343817461824,122
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4148_R1_1406604190.player2.path25.csv,383,8.37449313857008,67,9.409094540151,20
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4148_R1_1406604190.player4.path13.csv,1430,13.3731134857873,384,15.8997785095162,327
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4148_R2_1406604294.player6.path21.csv,1186,12.8466455952211,298,14.0629215236631,343
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4148_R2_1406604294.player7.path28.csv,1197,11.6641534202525,259,13.4488504877164,251
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4148_R2_1406604294.player9.path29.csv,1145,10.3178073826724,137,12.4021803704534,176
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4181_R1_1406571563.player3.path20.csv,1131,12.5212811144245,297,13.130879204687,305
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4181_R1_1406571563.player5.path19.csv,1413,11.3659048340928,298,13.2138257781561,275
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4181_R1_1406571563.player6.path18.csv,743,12.1849418210909,198,13.6899076528159,112
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4181_R1_1406571563.player7.path24.csv,1475,12.2018767182641,343,13.7488527749481,284
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4181_R2_LGB eSpor_Team LDLC.player0.path23.csv,1284,12.7708583330014,339,13.8917467005836,279
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4181_R2_LGB eSpor_Team LDLC.player4.path22.csv,1378,13.322180985161,400,15.3204560507873,278
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4181_R2_LGB eSpor_Team LDLC.player5.path19.csv,1567,13.9482937663853,478,16.8158435490994,462
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4181_R2_LGB eSpor_Team LDLC.player8.path2.csv,1764,13.091563808326,512,14.0068471574212,339
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4181_R4_1406571314.player6.path18.csv,800,11.5885382350593,192,12.1111966955144,113
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4181_R4_1406571314.player8.path19.csv,1468,12.4638801612527,386,13.9652645275943,234
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4343_R1_1406274822.player0.path31.csv,591,10.4772249442498,125,11.6944968767316,99
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4343_R1_1406274822.player1.path24.csv,978,12.7934533814996,270,13.5858110396245,173
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4343_R1_1406274822.player2.path9.csv,2310,13.9658748732485,689,15.6972229182034,519
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4343_R1_1406274822.player2.path15.csv,1935,11.7190317973139,468,13.2912397516232,408
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4343_R1_1406274822.player3.path13.csv,1662,13.3484465181596,379,14.4641698113952,345
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4343_R1_1406274822.player3.path14.csv,569,10.1656117199237,95,11.4099216277278,48
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4343_R1_1406274822.player3.path30.csv,692,11.2398881838921,177,12.8376094748397,103
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4343_R1_1406274822.player9.path18.csv,1994,12.1661878871242,430,13.6698308171691,431
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4355_R1_Epsilon_HellRaise.player0.path14.csv,1128,9.8085750304948,241,10.4187094516849,144
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4356_R1_CPH Wolve_Natus Vin.player6.path10.csv,1352,13.8415755708288,401,16.0088089573568,265
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4356_R1_CPH Wolve_Natus Vin.player9.path24.csv,1517,11.0862012834385,329,12.9953058193664,307
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4356_R1_Team LDLC_Natus Vin.player1.path17.csv,1386,9.89321894067354,253,11.2448660006764,162
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4356_R1_Team LDLC_Natus Vin.player5.path27.csv,1801,10.9117928072785,375,11.7415568459496,243
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4356_R1_Team LDLC_Natus Vin.player5.path28.csv,1455,11.404599460985,297,12.645946475785,283
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4356_R1_Team LDLC_Natus Vin.player9.path24.csv,2933,6.27261268702181,366,7.20208754644737,264
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4359_R1_1408196023.player1.path7.csv,1441,12.2681229328964,377,14.6284130105281,314
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4359_R1_1408196023.player1.path14.csv,1024,10.5752659018516,223,12.1378875044649,197
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4359_R1_1408196023.player5.path12.csv,2097,12.0058152092358,483,12.912777412251,345
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4359_R1_1408196023.player8.path20.csv,1270,8.71308252486162,216,9.90360510482619,164
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4359_R1_fnatic_Natus Vin.player0.path28.csv,701,10.6835378107823,139,12.2116765832144,100
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4359_R1_fnatic_Natus Vin.player5.path13.csv,627,10.1420217712358,135,11.1293949001298,60
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4359_R2_Team LDLC_Ninjas in.player5.path3.csv,1258,14.0874468963213,410,16.3710939489969,317
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4359_R3_1408297191.player1.path21.csv,1481,11.0137556803878,314,12.5744563010543,223
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4359_R3_1408297191.player5.path11.csv,1568,14.3665011046037,545,14.8164364789713,350
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4359_R3_1408297191.player7.path17.csv,1209,10.4738491484748,248,11.6305825153136,268
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4359_R3_1408297191.player8.path20.csv,2090,14.2607759184012,610,16.8131464188177,491
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4370_R1_Epsilon_iBUYPOWER.player0.path10.csv,1853,17.8411075160127,942,17.5621181021369,516
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4370_R1_Epsilon_iBUYPOWER.player9.path7.csv,2663,17.2342326448849,1144,17.5485116285642,539
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4370_R1_Epsilon_iBUYPOWER.player9.path18.csv,2863,19.7812698993672,1608,19.4224162786396,751
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4370_R1_Epsilon_Team Infu.player1.path11.csv,1216,15.4466330302496,498,15.2229392921822,158
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4370_R1_Epsilon_Team Infu.player8.path13.csv,3502,14.1855430908139,1140,15.9304585210054,785
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4370_R1_iBUYPOWER_Team Infu.player2.path5.csv,3157,16.3818625704645,1164,18.5583629159562,790
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4370_R1_iBUYPOWER_Team Infu.player2.path6.csv,1291,18.6910912588275,688,18.1910518909104,337
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4370_R1_iBUYPOWER_Team Infu.player4.path20.csv,2409,15.0523495222302,911,15.8560564136168,601
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4370_R1_iBUYPOWER_Team Infu.player5.path8.csv,2984,17.7206837950596,1432,19.0251868022756,975
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4370_R1_London Co_Epsilon.player1.path6.csv,1327,15.1509508655492,573,13.750556226274,204
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4370_R1_London Co_Epsilon.player4.path8.csv,1059,11.6117789028238,335,11.0228380588995,167
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4370_R1_London Co_Epsilon.player6.path16.csv,3895,18.5829572731196,1796,19.6694217929843,925
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4370_R1_London Co_Epsilon.player6.path24.csv,3111,16.5115598761047,1229,17.2210019157883,761
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4370_R1_London Co_Epsilon.player9.path6.csv,2937,15.2571843706063,1261,14.1735521471367,544
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4370_R1_Ninjas in_iBUYPOWER.player4.path1.csv,2939,14.4149957405918,981,15.1658918504009,541
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4370_R1_Ninjas in_iBUYPOWER.player4.path15.csv,1563,16.7824816712161,686,16.2446951999457,256
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4370_R1_Ninjas in_iBUYPOWER.player4.path21.csv,1966,16.7119330875401,914,16.8637404152288,339
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4370_R1_Ninjas in_iBUYPOWER.player6.path9.csv,1593,14.2267432152695,531,14.3042087295935,227
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4370_R1_Team Infu_fnatic.player4.path18.csv,3750,14.271274249339,1215,14.7661089161858,623
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4370_R1_Team Infu_fnatic.player6.path3.csv,2349,21.5183022017593,1442,21.4291420343145,817
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4370_R1_Team Infu_fnatic.player6.path9.csv,1588,14.6202814639903,595,14.931451739858,320
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4370_R1_Team Infu_fnatic.player8.path17.csv,1236,14.9975328303929,521,14.2860209668416,259
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4370_R1_Team Infu_fnatic.player8.path22.csv,3820,14.693280259142,1423,14.6151368265613,807
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4372_R1_1407862844.player2.path16.csv,1120,19.5771800335704,631,16.7171473338018,218
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4372_R1_1407862844.player6.path0.csv,1224,25.0757536875347,866,24.6431649467536,383
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4372_R1_1407862844.player7.path25.csv,3457,17.9361886202329,1499,18.8500530938333,970
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4372_R1_1407862844.player9.path19.csv,3687,13.2618440278718,1294,13.081824678484,639
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4372_R1_1407862844.player9.path22.csv,2007,15.1967370188155,829,14.975335999287,441
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4372_R1_1407863098.player3.path7.csv,3100,18.6980181928565,1648,19.4433214353754,908
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4372_R1_1407863098.player5.path6.csv,3620,17.1083018292864,1597,17.282590329404,704
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4372_R1_1407863098.player5.path23.csv,3343,16.6089814940622,1302,18.3698510570858,859
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4372_R1_1407863098.player6.path8.csv,1818,14.1540387019403,657,14.8406191597274,339
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4372_R1_1407863098.player7.path17.csv,1875,17.329942637328,813,18.0071635530261,426
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4372_R1_1407863405.player9.path5.csv,1842,19.8435257970609,1001,19.4482853748677,447
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4372_R1_London Co_Virtus Pr.player3.path20.csv,3794,13.2848757471012,1141,13.2343728951242,606
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4372_R1_London Co_Virtus Pr.player6.path3.csv,3757,17.4491433199972,1736,17.6673919790868,1083
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4372_R1_London Co_Virtus Pr.player6.path7.csv,1923,21.3182769767431,1200,19.2940563466614,487
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4372_R1_London Co_Virtus Pr.player8.path20.csv,3828,17.0254244614855,1467,17.8166395803925,868
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4372_R2_1407863566.player5.path4.csv,1854,21.4241754351833,1120,19.2786893624262,442
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4372_R2_1407864315.player3.path14.csv,4032,19.1119142110973,2068,20.4984108274281,1611
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4372_R2_1407864315.player3.path19.csv,1343,18.9783914184075,726,17.1642889077735,227
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4372_R2_1407864315.player5.path11.csv,1797,17.2944585511038,853,16.903428060378,314
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4372_R2_1407864315.player9.path20.csv,3463,14.2180735646027,1083,14.7906081507386,633
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4436_R2_1410818576.player0.path1.csv,1029,12.2952324014007,351,13.2491211849336,260
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4436_R2_1410818576.player0.path13.csv,2048,19.3254175926257,1022,19.6211665473067,476
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4436_R2_1410818576.player6.path9.csv,1690,15.7083290674192,594,16.7519515903617,507
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4436_R2_1410818576.player6.path32.csv,4040,20.4759260307011,2106,21.1361624241727,1355
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R1_Epsilon_HellRaise.player1.path28.csv,966,10.9575484926175,181,12.5784920859414,162
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R1_Epsilon_HellRaise.player1.path47.csv,3651,5.5153664990888,338,6.16014916465494,353
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R1_Epsilon_HellRaise.player2.path7.csv,475,8.77307012457528,75,11.6578414119917,49
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R1_Epsilon_HellRaise.player9.path62.csv,1522,12.5848770742873,402,13.6594656818067,333
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R1_fnatic_Epsilon.player2.path27.csv,758,10.0808885777738,137,10.9603778784902,85
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R1_fnatic_Epsilon.player2.path30.csv,1855,13.0645570656465,510,14.2466359089602,392
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R1_fnatic_Epsilon.player3.path8.csv,1556,12.2859169856554,361,13.9815228383505,289
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R1_fnatic_Epsilon.player4.path11.csv,1572,11.7133596715954,360,13.4845003091686,201
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R1_fnatic_Epsilon.player5.path17.csv,1527,14.1171799180873,462,15.9661855423099,387
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R1_fnatic_Ninjas in.player2.path18.csv,1675,6.50955362712347,213,7.77849441832073,215
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R1_fnatic_Ninjas in.player4.path9.csv,2019,12.169668640283,481,14.205502354236,382
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R1_fnatic_Ninjas in.player7.path8.csv,1585,10.7279609950121,308,12.5655216837789,315
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R1_fnatic_Ninjas in.player8.path24.csv,1888,12.5040778228021,409,14.2294562426506,264
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R1_fnatic_TitanCS.player5.path12.csv,1265,12.5849677237437,314,13.6545039770117,260
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R1_fnatic_TitanCS.player6.path25.csv,566,12.2140107208386,175,13.8344521910184,116
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R1_HellRaise_Mercenary.player2.path8.csv,408,8.81055832283725,79,10.5744443586458,49
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R1_HellRaise_Mercenary.player5.path23.csv,1855,11.2613495846197,390,13.150694441618,311
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R1_HellRaise_Mercenary.player6.path27.csv,1907,7.3211723413568,129,6.36914888729988,98
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R1_HellRaise_Mercenary.player7.path16.csv,1239,12.9092069799826,336,15.2810341412342,290
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R1_Ninjas in_Epsilon.player6.path31.csv,1088,10.2089560382163,233,11.7788369357963,189
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R1_Ninjas in_Epsilon.player9.path27.csv,4316,5.43078632370138,452,5.63091115423529,410
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R1_Ninjas in_Epsilon.player9.path29.csv,747,9.48178402160084,152,9.99538877463024,90
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R1_Team LDLC_Ninjas in.player3.path12.csv,1851,13.512156668966,498,14.9345432916282,299
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R1_Team LDLC_Ninjas in.player10.path14.csv,1379,13.0563342921914,360,14.6255006935721,270
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R1_Virtus Pr_Ninjas in.player1.path13.csv,869,12.5111874323893,243,14.8212549430296,199
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R1_Virtus Pr_Ninjas in.player6.path22.csv,1836,12.6725420912982,447,13.8264108051664,424
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R2_TitanCS_Ninjas in.player0.path25.csv,584,9.65739103919958,95,11.3976677024953,59
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4623_R2_TitanCS_Ninjas in.player4.path24.csv,867,11.1377779178902,153,12.6107404621626,118
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4624_R1_Aware Gam_savage.player1.path20.csv,728,12.2082403379698,202,13.8195972959396,131
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4624_R1_Aware Gam_savage.player3.path8.csv,1961,14.6293802890081,662,16.9176192359245,493
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4624_R1_Aware Gam_savage.player7.path16.csv,410,8.31850251273054,59,10.4147921870228,26
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4624_R1_Aware Gam_savage.player8.path0.csv,668,13.4903735670326,219,14.8457406728088,127
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4624_R1_Aware Gam_savage.player9.path19.csv,826,11.5456412755659,165,13.2265304697451,106
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4624_R1_Denial eS_Aware Gam.player0.path8.csv,515,9.90445159952359,95,11.1024607661987,50
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4624_R1_Denial eS_Aware Gam.player1.path5.csv,1133,10.3370898550712,212,11.932146813108,186
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4624_R1_Denial eS_Aware Gam.player6.path25.csv,845,10.1856283628324,146,12.9711477540573,145
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4624_R1_savage_Denial eS.player0.path8.csv,1810,11.6767014948174,330,15.0886747927624,305
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4624_R1_savage_Denial eS.player0.path11.csv,1299,11.7301095473921,248,14.0755194473345,206
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4624_R1_savage_Denial eS.player1.path9.csv,855,12.7315653285408,224,14.5869244473947,110
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4624_R1_savage_Denial eS.player2.path5.csv,1080,10.8424655235805,185,12.4992617788144,125
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4648_R1_DenmarkC_LatviaCS.player1.path11.csv,1780,14.2235269548073,692,15.2453693250772,409
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4648_R1_DenmarkC_LatviaCS.player2.path19.csv,1914,19.0643389753847,1229,20.4703172594666,541
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4648_R1_DenmarkC_LatviaCS.player4.path19.csv,1377,18.1967884490741,952,19.1675167516728,222
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4649_R1_GermanyC_SwedenCS.player0.path19.csv,1231,14.2281728221802,575,15.0232487928555,243
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4649_R1_GermanyC_SwedenCS.player3.path26.csv,2024,12.9698844088751,592,14.8383569160059,400
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4649_R1_GermanyC_SwedenCS.player5.path26.csv,817,14.4391361081887,387,16.7509930771563,168
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4649_R1_Portugal_SerbiaCS.player0.path20.csv,2466,16.1721048094313,1074,18.5738082468408,734
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4649_R1_Portugal_SerbiaCS.player2.path29.csv,2088,18.2779245833718,1165,19.7858890829625,363
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4649_R1_Portugal_SerbiaCS.player4.path26.csv,1275,11.4078807110864,427,12.1176274588905,192
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4649_R1_Portugal_SerbiaCS.player4.path28.csv,1908,17.5736200256488,1100,20.1233295846521,586
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4649_R1_Portugal_SerbiaCS.player4.path29.csv,1491,12.1955844660412,471,13.5071861967437,219
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4649_R1_SerbiaCS_SwedenCS.player0.path2.csv,746,21.635275113161,530,23.6568722954277,360
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4649_R1_SerbiaCS_SwedenCS.player0.path4.csv,1362,14.0788735246044,529,15.599534648469,344
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4649_R1_SerbiaCS_SwedenCS.player3.path24.csv,2339,15.3617462070917,1014,16.7387961235882,465
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4649_R1_SerbiaCS_SwedenCS.player4.path23.csv,1611,14.6357780261594,668,16.9724739292484,343
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4754_R1_OneShot_dAT team.player0.path36.csv,490,9.1251954764549,88,10.7511405458302,35
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4754_R1_OneShot_dAT team.player1.path16.csv,641,11.0567808088483,148,12.7680560111396,93
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4754_R1_OneShot_dAT team.player7.path14.csv,561,11.2982667675496,138,13.0515640229434,67
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4754_R1_OneShot_OveR Gami.player1.path7.csv,838,12.7037048822509,251,15.2506024695603,199
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4754_R1_OneShot_OveR Gami.player9.path1.csv,843,14.4059683766967,279,16.61985541128,186
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4754_R1_OveR Gami_dAT team.player1.path18.csv,944,10.8362004799327,184,12.9637393701234,125
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4754_R1_OveR Gami_dAT team.player9.path36.csv,477,9.73731707608087,93,11.2267456952128,34
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4755_R1_Epsilon_myXMG.player6.path1.csv,427,7.27863045564682,64,9.50605992523456,66
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4755_R1_Epsilon_myXMG.player6.path4.csv,1172,8.59157465999083,182,9.814197308873,203
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4755_R1_Epsilon_Team Orbi.player0.path24.csv,1220,13.0825863281977,295,14.6385533304075,200
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4755_R1_Epsilon_Team Orbi.player2.path29.csv,643,11.824932166606,160,13.4507086216588,90
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4755_R1_Epsilon_Team Orbi.player3.path29.csv,620,12.5538678416033,182,14.2681165854948,124
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4755_R1_Epsilon_Team Orbi.player4.path0.csv,798,17.0351334265601,353,18.5523612935923,165
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4755_R1_Epsilon_Team Orbi.player5.path11.csv,1787,13.5286849715948,493,15.5818670615939,381
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4755_R1_Epsilon_Team Orbi.player9.path1.csv,512,9.74345717210842,101,11.1494450370243,66
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4755_R1_Epsilon_Team Orbi.player9.path24.csv,1203,13.8789784314,376,16.0544427654587,303
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4755_R1_HellRaise_myXMG.player6.path17.csv,1640,13.8420295794031,478,15.882959139404,373
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4755_R1_myXMG_Team LDLC.player3.path11.csv,508,11.7348389338816,138,12.0899259440298,57
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4755_R1_myXMG_Team LDLC.player4.path1.csv,1922,11.2252132149054,510,12.8026895315035,374
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4755_R1_myXMG_Team LDLC.player4.path11.csv,523,10.8845579659956,126,12.1222661252022,62
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4756_R1_OveR Gami_Ninjas in.player3.path6.csv,1787,12.1415630503256,362,14.8230442314156,353
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4756_R2_1412070828.player1.path16.csv,952,11.9065643810034,187,13.9157266197025,103
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4756_R4_1412117199.player2.path41.csv,1934,10.765524291212,346,13.4487947494555,343
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4756_R4_1412117199.player3.path27.csv,1034,11.1492254536016,214,13.005863653098,164
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4756_R4_1412117199.player5.path17.csv,1142,12.6994773239441,331,13.5857905408175,218
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4756_R4_1412117199.player5.path31.csv,1952,11.3524477961103,410,12.1381330160071,392
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4757_R1_Epsilon_Natus Vin.player8.path14.csv,3640,20.3785020925175,1821,19.5656949182238,750
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4757_R1_Natus Vin_Team LDLC.player7.path20.csv,3687,22.09014707898,2104,22.1846451476266,1041
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4763_R1_1412406170.player3.path18.csv,455,10.5376377650916,109,11.1965453923748,54
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4763_R1_1412406170.player4.path27.csv,1199,9.93689832710203,137,11.1014405916275,212
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4763_R1_1412406170.player7.path6.csv,686,12.7353147941302,204,13.9994179990777,120
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4763_R1_1412406170.player8.path4.csv,1075,14.9709599809849,370,17.0787351815464,309
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4763_R2_1412684445.player0.path32.csv,1876,13.0786288526165,480,14.6568318762756,376
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4763_R2_1412684445.player1.path40.csv,1009,13.5738751121108,286,15.8495055239307,221
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4763_R2_1412684445.player4.path9.csv,1417,14.563228123112,424,15.7746986277225,246
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4763_R2_1412684445.player4.path45.csv,1870,13.3661226712453,470,16.0389597604011,303
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4763_R2_1412684445.player5.path38.csv,1438,10.1230752997653,232,11.335219263563,233
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4763_R2_1412684445.player6.path21.csv,1906,9.42121470646789,321,11.8913182349194,243
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4763_R2_1412684445.player7.path22.csv,1434,13.848031313081,419,16.3461795892588,308
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4763_R2_1412684445.player9.path0.csv,965,15.013542508884,299,16.1085062353365,171
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4763_R2_1412684445.player9.path38.csv,478,10.3151429573648,101,11.0379787387454,69
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4763_R2_1412694588.player3.path11.csv,1491,14.093547080696,482,15.9392604675664,265
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4763_R2_1412694588.player5.path2.csv,436,10.5338972148925,102,11.4514621841083,50
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4763_R2_1412694588.player5.path6.csv,1362,12.816248760495,375,14.7908160757959,307
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4763_R2_1412694588.player6.path26.csv,1217,11.7851890023861,300,14.9778033687946,329
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4763_R2_1412694588.player7.path9.csv,569,11.7292757157949,138,13.1944425605416,81
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4763_R2_1412694588.player8.path14.csv,1530,13.6533771753814,424,15.5532495389674,347
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4768_R1_1413397298.player0.path8.csv,432,9.68051609145262,90,10.6022662187696,52
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4768_R1_1413397298.player2.path4.csv,666,12.2390180701092,183,14.677008329998,138
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4768_R1_1413397298.player8.path25.csv,1416,10.3689731715386,249,11.7917556033722,208
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4768_R1_Team LDLC_CPH Wolve.player0.path11.csv,1517,11.7415808564691,304,13.7750458267107,219
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4768_R1_Team LDLC_CPH Wolve.player1.path13.csv,851,11.2784937550768,181,12.8423694589154,150
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4768_R1_Team LDLC_CPH Wolve.player7.path14.csv,899,12.5030391897931,245,14.9443786452546,173
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4770_R1_fnatic_Team Prop.player9.path8.csv,1947,16.3319849624916,765,18.5469281779925,359
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4772_R3_Team LDLC_VirtusPr.player3.path6.csv,1534,14.4253023244884,692,15.4497966855219,295
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4772_R5_1415555448.player0.path3.csv,1079,13.6197546754931,388,14.8813400131757,143
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4772_R5_1415555448.player1.path4.csv,1964,13.5516090029119,530,15.803083441521,263
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4772_R5_1415555448.player5.path6.csv,2130,14.4820752453652,746,16.1156231292263,444
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4811_R1_Ninjas in_Team Alte.player1.path25.csv,3123,11.6459530812504,706,13.548010347274,475
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4811_R1_Ninjas in_Team Alte.player2.path19.csv,991,15.3999469049137,502,16.2625243533254,212
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4811_R1_Ninjas in_Team Alte.player3.path15.csv,2135,14.4359742134486,776,14.9587096825233,562
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4811_R1_Ninjas in_Team Alte.player3.path20.csv,2204,13.5211516407761,585,15.0684632106674,296
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4811_R1_Ninjas in_Team Alte.player5.path18.csv,1962,16.8901293797032,1033,18.3369048120791,486
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4811_R1_Ninjas in_Team Alte.player5.path19.csv,889,16.7483508153406,513,16.9622695138988,148
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4811_R1_Ninjas in_Team Alte.player8.path17.csv,1458,13.0303519710763,507,15.2567535889001,333
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4811_R1_Ninjas in_Team LDLC.player2.path10.csv,960,14.6032246412456,431,16.9446308967335,251
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4813_R1_fnatic_TitanCS.player7.path6.csv,2618,16.0604972772615,1037,17.7724241296648,593
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\4813_R1_fnatic_TitanCS.player7.path7.csv,1706,13.4771789518843,473,14.427353698841,398
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5060_R1_1414698925.player0.path6.csv,930,17.4335351144055,475,15.6719123756513,150
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5060_R1_1414698925.player7.path6.csv,1010,17.0769067843029,468,18.9863108429757,335
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5060_R1_fnatic_k1ck eSpo.player0.path23.csv,2119,23.3989035814313,1403,21.2865866966637,541
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5060_R1_fnatic_k1ck eSpo.player5.path7.csv,802,9.73834246366396,227,12.4715586196017,200
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5060_R1_fnatic_k1ck eSpo.player8.path14.csv,1155,15.5454778333079,467,15.1506018417169,241
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5060_R1_fnatic_k1ck eSpo.player10.path14.csv,2555,18.0647504518837,1213,20.4173988204083,777
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5060_R1_k1ck eSpo_London Co.player3.path16.csv,1630,16.8100747035126,705,17.0768892683298,346
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5060_R1_k1ck eSpo_London Co.player4.path16.csv,1809,16.7123226308708,789,17.2234049269157,413
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5060_R1_k1ck eSpo_London Co.player5.path4.csv,1571,17.5163462026047,731,18.1138891873545,430
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5060_R1_k1ck eSpo_London Co.player9.path15.csv,2585,16.2337952301288,912,18.1438217217378,716
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5060_R1_Natus Vin_k1ck eSpo.player0.path7.csv,1011,5.58091062108242,157,7.329497020022,159
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5060_R1_Natus Vin_k1ck eSpo.player4.path20.csv,1043,13.789770714,395,13.0911661102756,160
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5060_R1_Natus Vin_k1ck eSpo.player4.path23.csv,2378,17.3342490651236,963,19.3313267300766,472
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5060_R1_Natus Vin_Pow.player0.path11.csv,3903,15.5355338233105,1527,15.1381687179163,647
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5060_R1_Natus Vin_Pow.player1.path4.csv,1688,18.0758490694465,834,17.5008816047547,311
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5060_R1_Natus Vin_Pow.player4.path26.csv,3145,16.5425890042057,1095,15.8739278836194,556
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5060_R1_Natus Vin_Pow.player6.path19.csv,3067,16.6199005369632,1239,18.0421431581717,721
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5060_R1_Pow_Energy eS.player2.path5.csv,1119,6.34270801130329,139,6.17463045919563,56
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5060_R1_Pow_Energy eS.player3.path9.csv,2334,20.148596747858,1287,18.5662995706783,552
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5060_R1_Pow_Energy eS.player4.path8.csv,1346,14.6221520801997,483,14.3378866128781,186
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5060_R1_Pow_Energy eS.player10.path9.csv,2494,17.1620129407021,1193,17.3242385675277,544
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5060_R1_Pow_Energy eS.player11.path12.csv,3161,20.2448892702157,1769,19.9747430064513,881
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5060_R1_Pow_Energy eS.player11.path25.csv,3056,18.7329545452664,1366,19.0240387912158,666
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5060_R1_Pow_Energy eS.player12.path16.csv,3155,18.7535222186571,1461,18.6304807612894,936
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5061_R1_AlienTech_Team LDLC.player3.path16.csv,3393,12.1646901730593,878,14.2830407449698,493
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5061_R1_AlienTech_Team LDLC.player4.path13.csv,3024,21.4235924708722,1664,21.31054029424,758
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5061_R1_Cloud9CS_Planetkey.player0.path13.csv,3320,13.6092324658505,1010,13.8089892278036,737
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5061_R1_Cloud9CS_Planetkey.player2.path25.csv,3462,20.488302371856,2029,20.8485536403465,931
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5061_R1_Cloud9CS_Planetkey.player3.path9.csv,853,14.7429549419693,372,14.334561372627,152
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5061_R1_Cloud9CS_Planetkey.player4.path23.csv,3546,11.766479960681,1040,13.057251851879,867
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5061_R1_Team LDLC_Cloud9CS.player0.path20.csv,1629,13.8331454540955,608,13.6621430739796,252
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5061_R1_Team LDLC_Virtual I.player0.path1.csv,1232,11.8675006929654,401,10.9650063407098,135
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5061_R1_Team LDLC_Virtual I.player3.path2.csv,674,27.9080333750343,563,28.026883756432,265
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5061_R1_Team LDLC_Virtual I.player7.path3.csv,806,20.6801734302589,475,20.4580346492841,248
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5061_R1_Team LDLC_Virtual I.player8.path15.csv,1055,11.0382258278155,313,9.75098144830801,93
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5064_R1_1414961095.player3.path2.csv,382,29.2841225653844,325,26.8212893357063,169
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5064_R1_1414961095.player6.path14.csv,3903,16.8759448206573,1352,17.5292249207196,780
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5064_R1_1414961095.player9.path18.csv,966,17.6172211203631,508,16.5578271074907,186
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5064_R3_1414960933.player2.path15.csv,1475,15.2759502999308,504,14.963831076712,303
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5064_R3_1414960933.player2.path17.csv,3977,13.2976415632255,1326,14.3863301055144,898
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5064_R3_1414960933.player3.path27.csv,3007,18.7890628724706,1413,19.1972383772616,649
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5077_R1_Team LDLC_Cloud9CS.player1.path19.csv,1318,12.4942531264938,273,13.8678162144739,191
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5077_R1_Team LDLC_Cloud9CS.player2.path9.csv,2125,10.2710388767024,400,11.7891940912266,289
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5077_R2_VirtusPr_Cloud9CS.player3.path14.csv,1212,14.2292714085983,360,15.7610722040297,205
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5077_R2_VirtusPr_Team LDLC.player3.path22.csv,1691,11.0830791565121,329,13.3007092955683,292
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5077_R2_VirtusPr_Team LDLC.player5.path11.csv,1445,10.7983191452824,244,12.1817549510831,217
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5077_R2_VirtusPr_Team LDLC.player9.path20.csv,1590,12.2412763193529,405,14.4492074608046,284
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5078_R1_iBUYPOWER_fnatic.player6.path12.csv,1398,11.6060646613397,271,12.8478472018634,210
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5078_R1_iBUYPOWER_fnatic.player7.path28.csv,781,11.1977009847732,155,11.6719818045494,97
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5079_R1_fnatic_VirtusPr.player2.path24.csv,1331,12.830793975996,315,14.5443200794878,282
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5079_R1_fnatic_VirtusPr.player4.path9.csv,1856,13.3212221298122,486,15.0689544266044,385
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5079_R1_fnatic_VirtusPr.player4.path22.csv,927,13.3170308829236,247,16.0262817098681,174
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5079_R1_fnatic_VirtusPr.player6.path25.csv,1480,11.6880585054928,314,12.7673500059703,221
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5079_R1_fnatic_VirtusPr.player8.path22.csv,1451,12.8562866413569,315,14.1527167783496,267
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5079_R1_Team LDLC_iBUYPOWER.player4.path24.csv,1392,11.6660273201502,339,13.8300700361373,314
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5079_R1_Team LDLC_iBUYPOWER.player4.path47.csv,2042,10.948133771643,446,12.2609709700069,365
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5079_R1_Team LDLC_iBUYPOWER.player5.path60.csv,1307,14.6804077084767,450,15.4570442838286,248
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5079_R1_Team LDLC_iBUYPOWER.player6.path21.csv,1707,10.936861107909,344,13.5059658711219,391
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5079_R1_Team LDLC_iBUYPOWER.player7.path26.csv,421,9.02240865303717,74,9.53842488444508,44
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5079_R1_Team LDLC_iBUYPOWER.player8.path38.csv,516,10.6382599460197,125,11.7389132614888,74
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5221_R1_Cloud9CS_HellRaise.player2.path4.csv,978,11.0398312523104,218,13.6895487394969,219
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5221_R1_Cloud9CS_HellRaise.player5.path4.csv,778,11.4474189035309,179,12.1910856823838,119
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5221_R1_Cloud9CS_HellRaise.player6.path11.csv,822,9.01853973354146,136,9.61330073830095,114
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5222_R1_iBUYPOWER_PENTA Spo.player0.path25.csv,1940,11.5652047502571,391,12.676575379882,358
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5222_R1_iBUYPOWER_PENTA Spo.player1.path29.csv,908,10.4619291583878,185,11.8837519958805,141
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5222_R1_iBUYPOWER_PENTA Spo.player6.path6.csv,1557,11.3121798069418,380,11.6911577732675,230
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5222_R1_iBUYPOWER_PENTA Spo.player7.path2.csv,725,10.6504745185991,168,11.9958024493352,110
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5222_R1_iBUYPOWER_PENTA Spo.player7.path27.csv,1961,12.9445336064293,510,15.0608095352433,611
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5222_R1_iBUYPOWER_PENTA Spo.player9.path7.csv,552,9.31843638038037,112,10.1975884960665,64
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5224_R1_VirtusPr_myXMG.player0.path18.csv,1566,11.8537749923812,351,13.1052361521064,248
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5224_R1_VirtusPr_myXMG.player3.path11.csv,572,9.26551480874215,100,10.2256641325815,42
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5224_R1_VirtusPr_myXMG.player4.path17.csv,1406,11.4271489020764,357,13.2736412823032,306
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5224_R1_VirtusPr_myXMG.player6.path1.csv,1042,12.5848659573191,280,13.1345751889241,239
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5224_R1_VirtusPr_myXMG.player9.path12.csv,1001,9.71954268802859,163,11.6374141372629,182
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5225_R1_1417175304.player3.path1.csv,2069,8.73486638754167,306,9.57595242955768,290
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5260_R1_Flipsid3 _London Co.player2.path8.csv,1872,13.3245604698121,490,15.0959027737483,457
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5260_R1_Flipsid3 _London Co.player3.path19.csv,1022,12.4399031825301,276,13.5085762553672,163
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\5260_R1_Flipsid3 _London Co.player8.path4.csv,1928,10.4611616977086,388,11.3796811952191,525
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\7234_R1_Team EnVy_Flipsid3 .player0.path1.csv,3846,13.9051558760858,1259,15.5409053084559,994
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\7234_R1_Team EnVy_Flipsid3 .player0.path3.csv,2728,13.2892727230145,841,15.3239066791262,887
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\7234_R1_Team EnVy_Flipsid3 .player5.path18.csv,2411,12.8449632856479,795,13.3337381731363,415
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\7234_R1_Team EnVy_Flipsid3 .player7.path4.csv,2728,14.7080960887969,995,15.1012165705558,501
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\7234_R1_Team EnVy_Flipsid3 .player8.path3.csv,2182,12.9403434674495,720,12.5688408131309,295
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\navi-vs-astana-techlabsfinals-inferno.player0.path16.csv,1423,11.6505107647225,306,13.3340117962898,282
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\navi-vs-astana-techlabsfinals-inferno.player5.path10.csv,1836,13.1804855989552,479,14.8613025237545,300
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\navi-vs-astana-techlabsfinals-inferno-ot2.player7.path0.csv,1145,11.8899719703737,259,13.9839082952966,160
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\og-vs-tritan-inferno-s11-1409.player6.path12.csv,632,11.0851824252419,145,12.7064109260328,99
+D:\Uni\DissertationData\RawPathFiles_MoreThanSixtyKB\og-vs-tritan-inferno-s11-1409.player7.path17.csv,1451,11.8152618746849,297,13.588750331067,225
