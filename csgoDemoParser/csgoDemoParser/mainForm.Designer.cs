@@ -38,26 +38,16 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripDropDownButton();
             this.SeperateRawDataCSVIntoPlayers_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seperatePlayercsvIntoPathsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.CombineMultipleCSVFilesIntoMasterCSV_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.ConnectToDatabase_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.connectToExistingDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.createNewDatabaseFromMastercsvFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.QueryMinMaxPositionValues_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.CreateAverageVelocityTrendMasterCSVFromDatabase_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.CombineVelocityColumncsvFilesIfQueryingSeperatelyMain_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripDropDownButton();
             this.CheckMapNamesOfdemSamples_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.CombineVelocityColumnCSVFilesIfQueryingSeperately_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.LoadLedReckoningMasterVelocityCSV_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loadPlayerPathsToExperimentUponToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.PerformExperiment_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
-            this.loadMasterCSVIntoMemory_ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AutoSamplingExperimentToolStripMenuItem_Button = new System.Windows.Forms.ToolStripMenuItem();
+            this.ResultsToolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.combineResultsCSVFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripDropDownButton3 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.testAgainstControlDataToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ZoomScrollBar = new System.Windows.Forms.HScrollBar();
             this.label1 = new System.Windows.Forms.Label();
-            this.AutoSamplingExperimentToolStripMenuItem_Button = new System.Windows.Forms.ToolStripMenuItem();
             this.VectorMapPicturePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VectorMapPictureBox)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -92,10 +82,10 @@
             this.HelpButton,
             this.toolStripButton1,
             this.toolStripButton2,
-            this.toolStripDropDownButton1,
             this.toolStripButton3,
             this.toolStripButton4,
-            this.toolStripDropDownButton2});
+            this.ResultsToolStripDropDownButton3,
+            this.toolStripDropDownButton3});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1246, 30);
@@ -137,8 +127,7 @@
             this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SeperateRawDataCSVIntoPlayers_ToolStripMenuItem,
-            this.seperatePlayercsvIntoPathsToolStripMenuItem,
-            this.CombineMultipleCSVFilesIntoMasterCSV_ToolStripMenuItem});
+            this.seperatePlayercsvIntoPathsToolStripMenuItem});
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
@@ -148,91 +137,23 @@
             // SeperateRawDataCSVIntoPlayers_ToolStripMenuItem
             // 
             this.SeperateRawDataCSVIntoPlayers_ToolStripMenuItem.Name = "SeperateRawDataCSVIntoPlayers_ToolStripMenuItem";
-            this.SeperateRawDataCSVIntoPlayers_ToolStripMenuItem.Size = new System.Drawing.Size(363, 26);
+            this.SeperateRawDataCSVIntoPlayers_ToolStripMenuItem.Size = new System.Drawing.Size(348, 26);
             this.SeperateRawDataCSVIntoPlayers_ToolStripMenuItem.Text = "Seperate rawData.csv file(s) into players";
             this.SeperateRawDataCSVIntoPlayers_ToolStripMenuItem.Click += new System.EventHandler(this.SeperateRawDataCSVIntoPlayers_ToolStripMenuItem_Click);
             // 
             // seperatePlayercsvIntoPathsToolStripMenuItem
             // 
             this.seperatePlayercsvIntoPathsToolStripMenuItem.Name = "seperatePlayercsvIntoPathsToolStripMenuItem";
-            this.seperatePlayercsvIntoPathsToolStripMenuItem.Size = new System.Drawing.Size(363, 26);
+            this.seperatePlayercsvIntoPathsToolStripMenuItem.Size = new System.Drawing.Size(348, 26);
             this.seperatePlayercsvIntoPathsToolStripMenuItem.Text = "Seperate player#.csv file(s) into paths";
             this.seperatePlayercsvIntoPathsToolStripMenuItem.Click += new System.EventHandler(this.SeperatePlayercsvIntoPaths_ToolStripMenuItem_Click);
-            // 
-            // CombineMultipleCSVFilesIntoMasterCSV_ToolStripMenuItem
-            // 
-            this.CombineMultipleCSVFilesIntoMasterCSV_ToolStripMenuItem.Name = "CombineMultipleCSVFilesIntoMasterCSV_ToolStripMenuItem";
-            this.CombineMultipleCSVFilesIntoMasterCSV_ToolStripMenuItem.Size = new System.Drawing.Size(363, 26);
-            this.CombineMultipleCSVFilesIntoMasterCSV_ToolStripMenuItem.Text = "Combine multiple .csv files into master.csv";
-            this.CombineMultipleCSVFilesIntoMasterCSV_ToolStripMenuItem.Click += new System.EventHandler(this.CombineMultipleCSVFilesIntoMasterCSV_ToolStripMenuItem_Click);
-            // 
-            // toolStripDropDownButton1
-            // 
-            this.toolStripDropDownButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ConnectToDatabase_ToolStripMenuItem,
-            this.QueryMinMaxPositionValues_ToolStripMenuItem,
-            this.CreateAverageVelocityTrendMasterCSVFromDatabase_ToolStripMenuItem,
-            this.CombineVelocityColumncsvFilesIfQueryingSeperatelyMain_ToolStripMenuItem});
-            this.toolStripDropDownButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton1.Image")));
-            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
-            this.toolStripDropDownButton1.Size = new System.Drawing.Size(86, 27);
-            this.toolStripDropDownButton1.Text = "Database";
-            // 
-            // ConnectToDatabase_ToolStripMenuItem
-            // 
-            this.ConnectToDatabase_ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.connectToExistingDatabaseToolStripMenuItem,
-            this.createNewDatabaseFromMastercsvFileToolStripMenuItem});
-            this.ConnectToDatabase_ToolStripMenuItem.Name = "ConnectToDatabase_ToolStripMenuItem";
-            this.ConnectToDatabase_ToolStripMenuItem.Size = new System.Drawing.Size(503, 26);
-            this.ConnectToDatabase_ToolStripMenuItem.Text = "Connect to database";
-            // 
-            // connectToExistingDatabaseToolStripMenuItem
-            // 
-            this.connectToExistingDatabaseToolStripMenuItem.Name = "connectToExistingDatabaseToolStripMenuItem";
-            this.connectToExistingDatabaseToolStripMenuItem.Size = new System.Drawing.Size(356, 26);
-            this.connectToExistingDatabaseToolStripMenuItem.Text = "Connect to existing Database";
-            this.connectToExistingDatabaseToolStripMenuItem.Click += new System.EventHandler(this.ConnectToExistingDatabase_ToolStripMenuItem_Click);
-            // 
-            // createNewDatabaseFromMastercsvFileToolStripMenuItem
-            // 
-            this.createNewDatabaseFromMastercsvFileToolStripMenuItem.Name = "createNewDatabaseFromMastercsvFileToolStripMenuItem";
-            this.createNewDatabaseFromMastercsvFileToolStripMenuItem.Size = new System.Drawing.Size(356, 26);
-            this.createNewDatabaseFromMastercsvFileToolStripMenuItem.Text = "Create new database from master.csv file";
-            this.createNewDatabaseFromMastercsvFileToolStripMenuItem.Click += new System.EventHandler(this.CreateNewDatabaseFromMastercsvFile_ToolStripMenuItem_Click);
-            // 
-            // QueryMinMaxPositionValues_ToolStripMenuItem
-            // 
-            this.QueryMinMaxPositionValues_ToolStripMenuItem.Enabled = false;
-            this.QueryMinMaxPositionValues_ToolStripMenuItem.Name = "QueryMinMaxPositionValues_ToolStripMenuItem";
-            this.QueryMinMaxPositionValues_ToolStripMenuItem.Size = new System.Drawing.Size(503, 26);
-            this.QueryMinMaxPositionValues_ToolStripMenuItem.Text = "Query min max position values";
-            this.QueryMinMaxPositionValues_ToolStripMenuItem.Click += new System.EventHandler(this.QueryMinMaxPositionValues_ToolStripMenuItem_Click);
-            // 
-            // CreateAverageVelocityTrendMasterCSVFromDatabase_ToolStripMenuItem
-            // 
-            this.CreateAverageVelocityTrendMasterCSVFromDatabase_ToolStripMenuItem.Enabled = false;
-            this.CreateAverageVelocityTrendMasterCSVFromDatabase_ToolStripMenuItem.Name = "CreateAverageVelocityTrendMasterCSVFromDatabase_ToolStripMenuItem";
-            this.CreateAverageVelocityTrendMasterCSVFromDatabase_ToolStripMenuItem.Size = new System.Drawing.Size(503, 26);
-            this.CreateAverageVelocityTrendMasterCSVFromDatabase_ToolStripMenuItem.Text = "Create average velocity trend MasterVelocity.csv from database";
-            this.CreateAverageVelocityTrendMasterCSVFromDatabase_ToolStripMenuItem.Click += new System.EventHandler(this.CreateAverageVelocityTrendMasterCSVFromDatabase_ToolStripMenuItem_Click);
-            // 
-            // CombineVelocityColumncsvFilesIfQueryingSeperatelyMain_ToolStripMenuItem
-            // 
-            this.CombineVelocityColumncsvFilesIfQueryingSeperatelyMain_ToolStripMenuItem.Name = "CombineVelocityColumncsvFilesIfQueryingSeperatelyMain_ToolStripMenuItem";
-            this.CombineVelocityColumncsvFilesIfQueryingSeperatelyMain_ToolStripMenuItem.Size = new System.Drawing.Size(503, 26);
-            this.CombineVelocityColumncsvFilesIfQueryingSeperatelyMain_ToolStripMenuItem.Text = "Combine velocityColumn#.csv files if querying seperately main";
-            this.CombineVelocityColumncsvFilesIfQueryingSeperatelyMain_ToolStripMenuItem.Click += new System.EventHandler(this.CombineVelocityColumnCSVFilesIfQueryingSeperately_ToolStripMenuItem_Click);
             // 
             // toolStripButton3
             // 
             this.toolStripButton3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.CheckMapNamesOfdemSamples_ToolStripMenuItem,
-            this.CombineVelocityColumnCSVFilesIfQueryingSeperately_ToolStripMenuItem});
+            this.CheckMapNamesOfdemSamples_ToolStripMenuItem});
             this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
@@ -246,20 +167,10 @@
             this.CheckMapNamesOfdemSamples_ToolStripMenuItem.Text = "Check map names of .dem samples";
             this.CheckMapNamesOfdemSamples_ToolStripMenuItem.Click += new System.EventHandler(this.CheckMapNamesOfdemSamples_ToolStripMenuItem_Click);
             // 
-            // CombineVelocityColumnCSVFilesIfQueryingSeperately_ToolStripMenuItem
-            // 
-            this.CombineVelocityColumnCSVFilesIfQueryingSeperately_ToolStripMenuItem.Name = "CombineVelocityColumnCSVFilesIfQueryingSeperately_ToolStripMenuItem";
-            this.CombineVelocityColumnCSVFilesIfQueryingSeperately_ToolStripMenuItem.Size = new System.Drawing.Size(460, 26);
-            this.CombineVelocityColumnCSVFilesIfQueryingSeperately_ToolStripMenuItem.Text = "Combine velocityColumn#.csv files if querying seperately";
-            this.CombineVelocityColumnCSVFilesIfQueryingSeperately_ToolStripMenuItem.Click += new System.EventHandler(this.CombineVelocityColumnCSVFilesIfQueryingSeperately_ToolStripMenuItem_Click);
-            // 
             // toolStripButton4
             // 
             this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripButton4.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.LoadLedReckoningMasterVelocityCSV_ToolStripMenuItem,
-            this.loadPlayerPathsToExperimentUponToolStripMenuItem,
-            this.PerformExperiment_ToolStripMenuItem,
             this.AutoSamplingExperimentToolStripMenuItem_Button});
             this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -267,44 +178,46 @@
             this.toolStripButton4.Size = new System.Drawing.Size(98, 27);
             this.toolStripButton4.Text = "Experiment";
             // 
-            // LoadLedReckoningMasterVelocityCSV_ToolStripMenuItem
+            // AutoSamplingExperimentToolStripMenuItem_Button
             // 
-            this.LoadLedReckoningMasterVelocityCSV_ToolStripMenuItem.Name = "LoadLedReckoningMasterVelocityCSV_ToolStripMenuItem";
-            this.LoadLedReckoningMasterVelocityCSV_ToolStripMenuItem.Size = new System.Drawing.Size(344, 26);
-            this.LoadLedReckoningMasterVelocityCSV_ToolStripMenuItem.Text = "Load LedReckoning MasterVelocity.CSV";
-            this.LoadLedReckoningMasterVelocityCSV_ToolStripMenuItem.Click += new System.EventHandler(this.LoadLedReckoningMasterVelocityCSV_ToolStripMenuItem_Click);
+            this.AutoSamplingExperimentToolStripMenuItem_Button.Name = "AutoSamplingExperimentToolStripMenuItem_Button";
+            this.AutoSamplingExperimentToolStripMenuItem_Button.Size = new System.Drawing.Size(344, 26);
+            this.AutoSamplingExperimentToolStripMenuItem_Button.Text = "Auto sampling experiment";
+            this.AutoSamplingExperimentToolStripMenuItem_Button.Click += new System.EventHandler(this.AutoSamplingExperimentToolStripMenuItem_Button_Click);
             // 
-            // loadPlayerPathsToExperimentUponToolStripMenuItem
+            // ResultsToolStripDropDownButton3
             // 
-            this.loadPlayerPathsToExperimentUponToolStripMenuItem.Enabled = false;
-            this.loadPlayerPathsToExperimentUponToolStripMenuItem.Name = "loadPlayerPathsToExperimentUponToolStripMenuItem";
-            this.loadPlayerPathsToExperimentUponToolStripMenuItem.Size = new System.Drawing.Size(344, 26);
-            this.loadPlayerPathsToExperimentUponToolStripMenuItem.Text = "Load player paths to experiment upon";
-            this.loadPlayerPathsToExperimentUponToolStripMenuItem.Click += new System.EventHandler(this.LoadPlayerPathsToExperimentUpon_ToolStripMenuItem_Click);
+            this.ResultsToolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.combineResultsCSVFilesToolStripMenuItem});
+            this.ResultsToolStripDropDownButton3.Name = "ResultsToolStripDropDownButton3";
+            this.ResultsToolStripDropDownButton3.Size = new System.Drawing.Size(69, 27);
+            this.ResultsToolStripDropDownButton3.Text = "Results";
             // 
-            // PerformExperiment_ToolStripMenuItem
+            // combineResultsCSVFilesToolStripMenuItem
             // 
-            this.PerformExperiment_ToolStripMenuItem.Enabled = false;
-            this.PerformExperiment_ToolStripMenuItem.Name = "PerformExperiment_ToolStripMenuItem";
-            this.PerformExperiment_ToolStripMenuItem.Size = new System.Drawing.Size(344, 26);
-            this.PerformExperiment_ToolStripMenuItem.Text = "Perform experiment";
-            this.PerformExperiment_ToolStripMenuItem.Click += new System.EventHandler(this.PerformExperiment_ToolStripMenuItem_Click);
+            this.combineResultsCSVFilesToolStripMenuItem.Name = "combineResultsCSVFilesToolStripMenuItem";
+            this.combineResultsCSVFilesToolStripMenuItem.Size = new System.Drawing.Size(250, 26);
+            this.combineResultsCSVFilesToolStripMenuItem.Text = "Combine results.CSV files";
+            this.combineResultsCSVFilesToolStripMenuItem.Click += new System.EventHandler(this.combineResultsCSVFilesToolStripMenuItem_Click);
             // 
-            // toolStripDropDownButton2
+            // toolStripDropDownButton3
             // 
-            this.toolStripDropDownButton2.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.loadMasterCSVIntoMemory_ToolStripMenuItem});
-            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
-            this.toolStripDropDownButton2.Size = new System.Drawing.Size(92, 27);
-            this.toolStripDropDownButton2.Text = "Optimised";
+            this.toolStripDropDownButton3.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.toolStripDropDownButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripDropDownButton3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.testAgainstControlDataToolStripMenuItem});
+            this.toolStripDropDownButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripDropDownButton3.Image")));
+            this.toolStripDropDownButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton3.Name = "toolStripDropDownButton3";
+            this.toolStripDropDownButton3.Size = new System.Drawing.Size(49, 27);
+            this.toolStripDropDownButton3.Text = "Test";
             // 
-            // loadMasterCSVIntoMemory_ToolStripMenuItem
+            // testAgainstControlDataToolStripMenuItem
             // 
-            this.loadMasterCSVIntoMemory_ToolStripMenuItem.Name = "loadMasterCSVIntoMemory_ToolStripMenuItem";
-            this.loadMasterCSVIntoMemory_ToolStripMenuItem.Size = new System.Drawing.Size(269, 26);
-            this.loadMasterCSVIntoMemory_ToolStripMenuItem.Text = "LoadMasterCSVIntoMemory";
-            this.loadMasterCSVIntoMemory_ToolStripMenuItem.Click += new System.EventHandler(this.loadMasterCSVIntoMemory_ToolStripMenuItem_Click);
+            this.testAgainstControlDataToolStripMenuItem.Name = "testAgainstControlDataToolStripMenuItem";
+            this.testAgainstControlDataToolStripMenuItem.Size = new System.Drawing.Size(247, 26);
+            this.testAgainstControlDataToolStripMenuItem.Text = "Test against control data";
+            this.testAgainstControlDataToolStripMenuItem.Click += new System.EventHandler(this.testAgainstControlDataToolStripMenuItem_Click);
             // 
             // ZoomScrollBar
             // 
@@ -324,13 +237,6 @@
             this.label1.Size = new System.Drawing.Size(90, 17);
             this.label1.TabIndex = 19;
             this.label1.Text = "Zoom image:";
-            // 
-            // AutoSamplingExperimentToolStripMenuItem_Button
-            // 
-            this.AutoSamplingExperimentToolStripMenuItem_Button.Name = "AutoSamplingExperimentToolStripMenuItem_Button";
-            this.AutoSamplingExperimentToolStripMenuItem_Button.Size = new System.Drawing.Size(344, 26);
-            this.AutoSamplingExperimentToolStripMenuItem_Button.Text = "Auto sampling experiment";
-            this.AutoSamplingExperimentToolStripMenuItem_Button.Click += new System.EventHandler(this.AutoSamplingExperimentToolStripMenuItem_Button_Click);
             // 
             // mainForm
             // 
@@ -362,27 +268,17 @@
         private System.Windows.Forms.ToolStripDropDownButton toolStripButton2;
         private System.Windows.Forms.ToolStripMenuItem SeperateRawDataCSVIntoPlayers_ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem seperatePlayercsvIntoPathsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
-        private System.Windows.Forms.ToolStripMenuItem ConnectToDatabase_ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem CombineMultipleCSVFilesIntoMasterCSV_ToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton toolStripButton3;
         private System.Windows.Forms.ToolStripMenuItem CheckMapNamesOfdemSamples_ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem QueryMinMaxPositionValues_ToolStripMenuItem;
         private new System.Windows.Forms.ToolStripButton HelpButton;
-        private System.Windows.Forms.ToolStripMenuItem connectToExistingDatabaseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem createNewDatabaseFromMastercsvFileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem CreateAverageVelocityTrendMasterCSVFromDatabase_ToolStripMenuItem;
         private System.Windows.Forms.ToolStripDropDownButton toolStripButton4;
-        private System.Windows.Forms.ToolStripMenuItem LoadLedReckoningMasterVelocityCSV_ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem loadPlayerPathsToExperimentUponToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem PerformExperiment_ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem CombineVelocityColumnCSVFilesIfQueryingSeperately_ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem CombineVelocityColumncsvFilesIfQueryingSeperatelyMain_ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
-        private System.Windows.Forms.ToolStripMenuItem loadMasterCSVIntoMemory_ToolStripMenuItem;
         private System.Windows.Forms.HScrollBar ZoomScrollBar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ToolStripMenuItem AutoSamplingExperimentToolStripMenuItem_Button;
+        private System.Windows.Forms.ToolStripDropDownButton ResultsToolStripDropDownButton3;
+        private System.Windows.Forms.ToolStripMenuItem combineResultsCSVFilesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton3;
+        private System.Windows.Forms.ToolStripMenuItem testAgainstControlDataToolStripMenuItem;
     }
 }
 

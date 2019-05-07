@@ -1,6 +1,9 @@
 ﻿
 namespace csgoDemoParser
 {
+    /*
+     * 
+     */
     class HelpMessage
     {
         // The message to be displayed
@@ -8,42 +11,38 @@ namespace csgoDemoParser
         {
             return "Start by loading a .dem file \n" +
             "The resulting rawData.csv can then be parsed into players. " +
-            "This can be used to prune empty or non existent players such as spectators or coaches. " +
-            "(easily identifiable as each game can only have 10 players. More player files " +
-            "imply non valid players present - ignore) \n\n" +
+            "This can be used to manually prune empty or non existent players such as spectators or coaches " +
+            "(easily identifiable as each game can only have 10 players. More player files represent non " +
+            "valid players present - ignore). Then process the player files into path files, and remove " +
+            "any paths less than 5 seconds in length (approximately < 60KB). The remaining path files are " +
+            "valid to perform the experiment with.\n\n" +
 
-            "The 'Combine multiple .csv files into master.csv' button will allow the selection of " +
-            "all potential data, and will write a master.csv file. This will likely be too large to " +
-            "load entirely into a program for analysis (164 .dem files ~= 8GB master.csv file). " +
-            "Instead, transfer this data into an SQL database table with the 'Connect to database " +
-            "-> Create new database from master.csv file' button. \n\n" +
+            "PERFORMING AN EXPERIMENT.\n" +
+            "Under the menu bar choose 'Experiment'->'Auto Sampling Experiment' to begin. " +
+            "A file explorer prompt will ask the user to select all path.csv files that are intended " +
+            "to be used in the experiment. A random path is chosen as the experiment subject, and the remainder " +
+            "are processed into a velocity trend data structure. This will take between 1-3 minutes depending upon " +
+            "hardware. Once completely processed, an experiment upon the randomly selected experiment subject will " +
+            "automatically begin as described in the accompanying dissertation research paper. Upon completion, the " +
+            "results will saved to an appropriately named CSV file, an image of the trend map and paths simulated will be " +
+            "displayed in the WinForms component, and that image will also be saved as a PNG file alongside the " +
+            "results.CSV file and named similarly.\n\n" +
 
-            "To identify velocity trends within the map, use 'Create average velocity trend " +
-            "MasterVelocity.csv from database'. This will query the database for position values " +
-            "falling within tiles of a grid, aggregating and averaging the velocity values for each " +
-            "grid tile. This grid is bound by values determined by 'Query min max position values' " +
-            "and split by a value: Experiment.LevelAxisSubdivisions = 100 (default) vertically and " +
-            "horizontally to subdivide the map into 10,000 tiles. \n\n" +
+            "TESTING.\n" +
+            "Checking the map name of the replay data DEM files is done by 'Debug tools'->'Check map names'. " +
+            "This will output a CSV results file to reveal the map name of each replay file.\n\n" +
 
-            "For a more lightweight approach this program writes a seperate velocity#.csv file " +
-            "per 100 queries. Use 'Combine velocityColumn#.csv files' to select all 100 generated velocity files " +
-            "and combine them into one masterVelocity#.csv file. This is the first goal of this " +
-            "program, and serves as a culmination of all the velocity trends in a small file. \n\n" +
-
-            "This data can be visualised with the 'Load LedReckoning MasterVelocity.CSV' button. Both " +
-            "in the winforms app and saved as a .png file. \n\n" +
+            "'Test'->'Test Against Control Data' will prompt a usual experiment, however afterwards will prompt " +
+            "the loading of a control data results CSV file to check against. For zero velocity and fixed velocity tests " +
+            "these are precalculated, or if using the testPath to ensure the program is behaving consistently " +
+            "over development iterations, select the additional trend data for both teams to perform the more complex " +
+            "recreation, before being prompted to load the results file to compare against. All test files are supplied " +
+            "and appropriately named under /TestPaths, although due to file paths differing, the comparisons may not pass " +
+            "with differing file locations. Evidence of the tests passing can be seen in Appendix C of the accompanying dissertation.\n\n" +
 
             "Please bear in mind that this is a collection of tools for the collection, parsing, " +
             "and summarising of data trends. User experience has not been a strong design factor as " +
-            "this tool is only expected to be used by myself currently. \n\n" +
-
-            "Using 'Seperate player#.csv file(s) into paths' button will write out every seperate " +
-            "path from a player file. The experiment will ask for a selection of path files, from " +
-            "which it will randomly choose a non zero length path to experiment upon. \n\n" +
-
-            "Performing an experiment will output comparison statistics between traditional threshold " +
-            "based dead reckoning and the proposed led reckoning approach using the derived velocity " +
-            "trend map.";
+            "this tool is only expected to be used by myself currently. \n\n";
         }
     }
 }

@@ -5,12 +5,20 @@ using System.Windows.Forms;
 
 namespace csgoDemoParser
 {
+    /*
+     * Used to load a player path CSV file into memory
+     * 
+     * Inherits from IDisposable to allow the 'using' keyword for managed memory clean up when loading many paths
+     */
     class PlayerPathLoader :  IDisposable
     {
         // The positions of these values in a comma seperated split list from a playerPath.csv file ReadLine()
         const int listPositionX = 2;
         const int listPositionY = 3;
         const int listPositionZ = 4;
+        const int listVelocityX = 8;
+        const int listVelocityY = 9;
+        const int listVelocityZ = 10;
 
         // The name of the path being looked at
         public string pathName;
@@ -18,21 +26,21 @@ namespace csgoDemoParser
         // The name of the team this player belongs to
         public string teamName;
 
-        // The data structure used to hold a player Path. Where the int key is the frame number, and the string[] value is the parsed player information at that frame
+        // The data structure used to hold a player path. Where the int key is the frame number, and the string[] value is the parsed player information at that frame
         public Dictionary<int, string[]> pathDictionary;
 
         /*
-         * Constructor
+         * Constructor initialises the data structure
          */
         public PlayerPathLoader()
         {
-            // Store the frame against the csv line
+            // Stores the frame against the relevant csv line
             pathDictionary = new Dictionary<int, string[]>();
         }
 
         /*
          * Allows a user to select a number of playerPath.csv files, randomly selects and returns the first non zero
-         * length path found in the list, else returns false
+         * length path found in the list, else returns false (normally if a zero length path is chosen)
          */
         public bool ChooseValidPath()
         {
@@ -46,8 +54,7 @@ namespace csgoDemoParser
             openFileDialog.Title = "Select playerPath#.csv files";
 
             // Show the Dialog.  
-            // If the user clicked OK in the dialog and  
-            // a .csv file was selected, open it.  
+            // If the user clicked OK in the dialog and a .csv file was selected, open it.
             if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 // Shuffle fileNames list
@@ -57,9 +64,10 @@ namespace csgoDemoParser
                 // Go through the shuffled list, LoadCSVPath until returns a non-zero length path
                 while (!validPathChosen)
                 {
+                    // Look at each filename in the shuffled list
                     foreach (string fileName in potentialPaths)
                     {
-                        // Returns false if zero length path
+                        // Returns false if filename is a zero length path
                         if (LoadCSVPath(fileName))
                         {
                             // If valid path found, break
@@ -82,6 +90,8 @@ namespace csgoDemoParser
                 MessageBox.Show("Potential path successfully chosen.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 return true;
             }
+
+            // Should not get to here
             return false;
         }
 
@@ -100,6 +110,7 @@ namespace csgoDemoParser
         {
             pathName = fileName;
 
+            // Using keyword for disposable memory management
             using (StreamReader stringReader = new StreamReader(fileName))
             {
                 // Load the pathfile.csv into memory
@@ -146,15 +157,12 @@ namespace csgoDemoParser
                         if (pathDictionary[0][listPositionZ] == pathDictionary[pathDictionary.Count - 1][listPositionZ])
                         {
                             // If last position is identical to start position then we presume that the path has no length
-                            // Show path irrelevant message
-                            MessageBox.Show("Path: " + fileName + " travels no distance. Discard.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                             return false;
                         }
                     }
                 }
-
-                // Success message
-                MessageBox.Show("Finished importing path data csv file. \n Random path: " + fileName + " chosen.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                
+                // Valid non zero length path found
                 return true;
             }
         }

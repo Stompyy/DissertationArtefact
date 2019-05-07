@@ -1,11 +1,13 @@
 ﻿using System;
-using System.IO;
-using System.Windows.Forms;
 
 namespace csgoDemoParser
 {
     /*
-     * Level Experiential/Educated Dead (Led) Reckoning
+     * Level Experiential Dead (Led) Reckoning (The proposed method by the dissertation)
+     * 
+     * Inherits from the TraditionalDeadReckoning class for similar functionality save the proposed amendments to 
+     * threshold and blend time. Included here is space afforded towards attempting to tend the prediction towards
+     * the trend as described in Appendix 2 of the dissertation. This will be in GetProjectedPosition() overriden function
      */
     class LedReckoning : TraditionalDeadReckoning
     {
@@ -18,11 +20,8 @@ namespace csgoDemoParser
         // The data table from which to look up the the current velocity trend
         private Vector[,] m_LedReckoningLevelDataTable;
 
-        // The -1 to 1 compliance value based off of the dot product between the current velocity and the velocity trend
-        private double compliance;
-
-        // The 0 to 1 confidence value is the absolute value of the compliance. 0 = perpendicular, 1 = parallel. Defined as |compliance|
-        private double confidence;
+        // The 0 to 1 correlation value of the current velocity to the trend velocity. 0 = perpendicular, 1 = parallel
+        private double correlation;
 
         /*
          * Constructor references the led reckoning level data table
@@ -43,29 +42,23 @@ namespace csgoDemoParser
         {
             get
             {
-                // Should this take magnitude into account also... areas of near zero overall velocity trend should not as be subject
-                // Vector length is the velocity so just 
-                //velocityTrend.Length / InfernoLevelData.maxPlayerSpeed
-
                 // Get the current velocity trend
                 velocityTrend = GetVelocityTrend(deadReckonedPosition.X, deadReckonedPosition.Y);
                 
                 // If there is a simulated velocity value to work with (be able to take a dot product from)
                 if (simulatedVelocity.Length != 0.0 && velocityTrend.Length != 0.0f)
                 {
-                    // Update the compliance and confidence values
-                    compliance = Vector.Dot(simulatedVelocity.Normalised, velocityTrend.Normalised);
-                    confidence = Math.Abs(compliance);
+                    // Update the correlation value
+                    correlation = Math.Abs(Vector.Dot(simulatedVelocity.Normalised, velocityTrend.Normalised));
                 }
                 else
                 {
-                    // Default confidence is the uncommitted midpoint between 0 - 1.
-                    compliance = 0.5f;
-                    confidence = 0.5f;
+                    // Default correlation is the uncommitted midpoint between 0 - 1.
+                    correlation = 0.5f;
                 }
 
-                // Return the max at full confidence, min at zero, and a grade throughout for an intermediate value
-                return MinimumThreshold + (MaximumThreshold - MinimumThreshold) * confidence;
+                // Return the max at full correlation, min at zero, and a grade throughout for an intermediate value
+                return MinimumThreshold + (MaximumThreshold - MinimumThreshold) * correlation;
             }
         }
 
@@ -74,20 +67,24 @@ namespace csgoDemoParser
          */
         protected override Vector GetProjectedPosition(Vector startingPosition, Vector velocity, float deltaTime)
         {
-            // I think this may need to look at the actual changes in velocity not the velocity trend
-            // Adjust the acceleration in line with the velocity trend data
-            // Attempts to push the simulation towards the velocity trend by finding the average of the last known acceleration and the velocityTrend compliance
-            Vector accelerationTrend = lastKnownAcceleration + velocityTrend * compliance;
+            // ... It is here that future work will attempt to tend the led reckoning simulation towards the velocity trend values
+            // as discussed in the dissertation's Appendix 2. For now, we will mirror the dead reckoning approach
 
             // Second order derivitive prediction using Newtonian laws of motion
             return startingPosition + (velocity * deltaTime) + (lastKnownAcceleration * 0.5f * deltaTime * deltaTime);
         }
 
+        /*
+         * The time in seconds allowed for the projection using the simulation values to interpolate and
+         * reconcile with the projection using the last known values.
+         * 
+         * Alters with the threshold as justified in the dissertation
+         */
         protected override float blendTime
         {
             get
             {
-                return (float)(80.0 / Threshold) / Experiment.framesPerSecond;
+                return 80.0f * (float)(1.0 / Threshold) / Experiment.framesPerSecond;
             }
         }
 
@@ -96,93 +93,11 @@ namespace csgoDemoParser
          */
         private Vector GetVelocityTrend(double playerPositionX, double playerPositionY)
         {
-            // Translate the world position into appropriate data structure look up coordinates
+            // Translate the in game position into appropriate data structure look up coordinates
             int[] lookUpCoords = InfernoLevelData.TranslatePositionIntoLookUpCoordinates(playerPositionX, playerPositionY);
 
-            //  Look at the rounded down int value
-            Vector lowerBound = m_LedReckoningLevelDataTable[lookUpCoords[0], lookUpCoords[1]];
-
-            return lowerBound;
-
-
-            // Look at the rounded up int value
-            Vector upperBound = m_LedReckoningLevelDataTable[lookUpCoords[0] + 1, lookUpCoords[1] + 1];
-
-            // Get the x position place in the grid tile as a 0-1 value across the tile
-            double xStep = (playerPositionX - (InfernoLevelData.minimumXValue + lookUpCoords[0] * InfernoLevelData.subdivisionSizeX)) / InfernoLevelData.subdivisionSizeX;
-
-
-            // Get the y position place in the grid tile as a 0-1 value across the tile
-            double yStep = (playerPositionY - (InfernoLevelData.minimumYValue + lookUpCoords[1] * InfernoLevelData.subdivisionSizeY)) / InfernoLevelData.subdivisionSizeY;
-
-            // Use the 0-1 placement within the grid values to smoothstep (bell shape interpolation) between the lower and upper bounds
-            return new Vector()
-            {
-                X = lowerBound.X + (upperBound.X - lowerBound.X) * Utilities.FSmoothStep(xStep),
-                Y = lowerBound.Y + (upperBound.Y - lowerBound.Y) * Utilities.FSmoothStep(yStep),
-                Z = lowerBound.Z
-            };
-        }
-
-        /*
-         * Allows the user to choose and load a led reckoning velocity trend .csv into memory as a Vector[,]
-         */
-        public static Vector[,] LoadLedReckoningData()
-        {
-            Vector[,] returnArray = new Vector[Experiment.LevelAxisSubdivisions, Experiment.LevelAxisSubdivisions];
-
-            // Displays an OpenFileDialog so the user can select a .csv file.  
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "CSV file|*.csv";
-            openFileDialog.Title = "Select master.csv file";
-
-            // Show the Dialog.  
-            // If the user clicked OK in the dialog and  
-            // a .csv file was selected, open it.  
-            if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                try
-                {
-                    // Open the fileName
-                    using (StreamReader reader = new StreamReader(openFileDialog.FileName))
-                    {
-                        // Start at y = 0 row
-                        int y = 0;
-
-                        string currentLine;
-
-                        // ReadLine() is null at the end of the file
-                        while ((currentLine = reader.ReadLine()) != null)
-                        {
-                            // Get each cell 
-                            string[] splitLine = currentLine.Split(',');
-
-                            // Step through the split line parsing then writing each cell as a Vector into the returnArray
-                            for (int x = 0; x < Experiment.LevelAxisSubdivisions; x++)
-                            {
-                                // Split the cell by the chosen non comma seperator, in this case '@'
-                                string[] splitCell = splitLine[x].Split(new string[] { "@" }, StringSplitOptions.RemoveEmptyEntries);
-
-                                // Construct the Vector and set it's place in the returnArray
-                                returnArray[x, y] = new Vector(splitCell[0], splitCell[1], splitCell[2]);
-                            }
-
-                            // Increment y value to look at next row
-                            y++;
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    // Else failed message
-                    MessageBox.Show("Error: " + ex.ToString(), "Failed", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                }
-
-                // Success message
-                MessageBox.Show("Finished importing level data csv file.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            }
-
-            return returnArray;
+            // Return the looked up Vector
+            return m_LedReckoningLevelDataTable[lookUpCoords[0], lookUpCoords[1]];
         }
     }
 }

@@ -20,8 +20,7 @@ namespace csgoDemoParser
             openFileDialog.Title = "Select a rawData.csv file";
 
             // Show the Dialog.  
-            // If the user clicked OK in the dialog and  
-            // a .csv file was selected, open it.  
+            // If the user clicked OK in the dialog and a .csv file was selected, open it.
             if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 // If more than one rawData.csv file has been selected

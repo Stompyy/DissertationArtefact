@@ -9,6 +9,11 @@ namespace csgoDemoParser
      */
     class PlayerPathParser
     {
+        // The positions of these values in a comma seperated split list from a playerPath.csv file ReadLine()
+        const int listPositionX = 2;
+        const int listPositionY = 3;
+        const int listPositionZ = 4;
+
         string[] splitFileName;
         string headerLine;
         StreamWriter outputStream;
@@ -18,6 +23,7 @@ namespace csgoDemoParser
         // Any distance greater than this is decided to describe a respawn event or reposition between matches
         // Generously decided, as the max player speed is 300 units/second and the replay is parsed at 60 frames/second
         // Max should therefore be 300/60 = 5. This generosity may help parse falling data or missing frames in the replay file
+        // Actual in game distance is equivalent to 95.25cm https://developer.valvesoftware.com/wiki/Dimensions
         const double maxStepAllowed = 50.0;
 
         /*
@@ -32,8 +38,7 @@ namespace csgoDemoParser
             openFileDialog.Title = "Select player#.csv files";
 
             // Show the Dialog.  
-            // If the user clicked OK in the dialog and  
-            // a .csv file was selected, open it.  
+            // If the user clicked OK in the dialog and a .csv file was selected, open it.
             if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 // If multiple files chosen look at each file in turn
@@ -85,13 +90,12 @@ namespace csgoDemoParser
                     lineItems = currentLine.Split(',');
 
                     // Get the current position and initialise the currentPosition variable
-                    currentPosition = new Vector(lineItems[2], lineItems[3], lineItems[4]);
+                    currentPosition = new Vector(lineItems[listPositionX], lineItems[listPositionY], lineItems[listPositionZ]);
 
                     // Write the current line to the current output stream
                     outputStream.WriteLine(currentLine);
                 }
-
-
+                
                 // CurrentLine will be null when the StreamReader reaches the end of file
                 while ((currentLine = stringReader.ReadLine()) != null)
                 {
@@ -102,7 +106,7 @@ namespace csgoDemoParser
                     lastPosition = currentPosition;
 
                     // Get the current position
-                    currentPosition = new Vector(lineItems[2], lineItems[3], lineItems[4]);
+                    currentPosition = new Vector(lineItems[listPositionX], lineItems[listPositionY], lineItems[listPositionZ]);
 
                     // Distance check. Ensures each path is kept seperate despite jumps accounting for death/respawn, end of match etc
                     if ((currentPosition - lastPosition).Length > maxStepAllowed)

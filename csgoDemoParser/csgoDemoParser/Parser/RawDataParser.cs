@@ -22,8 +22,7 @@ namespace csgoDemoParser
             openFileDialog.Title = "Select .dem file";
 
             // Show the Dialog.  
-            // If the user clicked OK in the dialog and  
-            // a .dem file was selected, open it.  
+            // If the user clicked OK in the dialog and a .dem file was selected, open it.
             if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 // If multiple files are selected, look at each fileName in turn
@@ -50,7 +49,7 @@ namespace csgoDemoParser
          */
         public static void ParseDemFile(string fileName)
         {
-            // By using "using" we make sure that the fileStream is properly disposed else will cause memory leak
+            // By using "using" we make sure that the fileStream is properly disposed to avoid memory leak
             using (Stream fileStream = File.OpenRead(fileName))
             {
                 // Same using method for disposing of DemoParser
@@ -62,7 +61,7 @@ namespace csgoDemoParser
                     // Appropriately names an output file stream according to the fileName
                     string outputFileName = fileName.Split('.')[0] + ".rawdata.csv";
                     // and open it. 
-                    var outputStream = new StreamWriter(outputFileName);
+                    StreamWriter outputStream = new StreamWriter(outputFileName);
 
                     // Writes a csv header line for readability. Describes the contents of each column
                     outputStream.WriteLine(CSVWriter.GenerateCSVHeader(parser.Map));
@@ -94,8 +93,8 @@ namespace csgoDemoParser
         }
 
         /*
-         * Returns the name of the map from the demo replay file. Used as a sanity check and debugging by naming and shaming any incorrectly named replay files
-         * included in the demo files...
+         * Returns the name of the map from the demo replay file. Used as a sanity check and debugging by naming and shaming any incorrectly
+         * named replay files included in the demo files...
          */
         public static string GetMapName(string fileName)
         {

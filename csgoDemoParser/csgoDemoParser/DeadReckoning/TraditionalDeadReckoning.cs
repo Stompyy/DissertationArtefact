@@ -4,25 +4,14 @@ namespace csgoDemoParser
     /*
      * Traditional threshold based dead reckoning client side prediction and simulation method
      * 
-     * Also acts the base class for the proposed LedReckoning class
+     * Also acts the base class for the dissertation's proposed LedReckoning class
      */
     public class TraditionalDeadReckoning
     {
-        // The time in seconds allowed for the simulation projection values to interpolate and reconcile with the last known values projection
-    //    const float blendTime = (4.0f / Experiment.framesPerSecond);//0.15f;
-
         // The maximum distance in game units of the simulated position from the actual position allowed, before a simulated packet update is prompted
         public double Threshold;
 
-        protected virtual float blendTime
-        {
-            get
-            {
-                return (float)(80.0 / Threshold) / Experiment.framesPerSecond;
-            }
-        }
-
-        // Needed values for the simulation
+        // Needed Vectors for the simulation
         public Vector
 
             // The projection's motion values
@@ -34,11 +23,14 @@ namespace csgoDemoParser
             // Starting values for the projection as per last update
             projectedPositionAtLastUpdate, projectedVelocityAtLastUpdate;
 
-        // The frame number of the last simulated packet update for which Vectors lastKnown... apply
+        // The frame number of the last simulated packet update for which Vectors lastKnown values apply
         public int lastKnownTime;
 
         // Used to track the number of prompted packet updates required
         public int numberOfUpdatesNeeded;
+
+        // Used to adjust the DEM file velocity value to a per frame velocity value
+        private float velocityMultiplier;
 
         /*
          * Constructor initialises values to the initialPosition or a zero value
@@ -63,6 +55,23 @@ namespace csgoDemoParser
 
             // Initialise the measure of packet updates needed to zero
             numberOfUpdatesNeeded = 0;
+
+            // Used to translate in game velocity values to per frame relevant value
+            velocityMultiplier = InfernoLevelData.maxPlayerSpeed / Experiment.framesPerSecond;
+        }
+
+        /*
+         * The time in seconds allowed for the projection using the simulation values to interpolate and
+         * reconcile with the projection using the last known values.
+         * 
+         * protected virtual allows protected override in derived classes for different functionality
+         */
+        protected virtual float blendTime
+        {
+            get
+            {
+                return 4.0f / Experiment.framesPerSecond;
+            }
         }
 
         /*
@@ -72,11 +81,6 @@ namespace csgoDemoParser
          */
         protected virtual Vector GetProjectedPosition(Vector startingPosition, Vector velocity, float deltaTime)
         {
-            Vector vt = velocity * deltaTime;
-            Vector at2 = lastKnownAcceleration * 0.5f * deltaTime * deltaTime;
-            Vector deltaPos = vt + at2;
-            double deltaDist = deltaPos.Length;
-
             // Second order derivitive prediction using Newtonian laws of motion
             return startingPosition + (velocity * deltaTime) + (lastKnownAcceleration * 0.5f * deltaTime * deltaTime);
         }
@@ -93,13 +97,9 @@ namespace csgoDemoParser
             // Run Newton algorithm on last known real values to give a vector position for our simulation to interpolate towards
             Vector projectionUsingLastKnownValues = GetProjectedPosition(
                 lastKnownPosition,
-                lastKnownVelocity * 4.0f,
+                lastKnownVelocity * velocityMultiplier,
                 deltaTime
                 );
-
-            // THIS SIM VELOCITY IS NOT REFLECTING THE POSITION BLEND!!!
-            // THEREFORE NO WARMING UP, NO WARMING DOWN, AND ABRUPT CHANGES IN DIRECTION!!!
-            // oR ALWAYS HAVE IT BLENDING?
 
             // Do Velocity blending between current game simulation velocity and last known velocity
             simulatedVelocity = VectorBlend(projectedVelocityAtLastUpdate, lastKnownVelocity, deltaTime);
@@ -107,14 +107,14 @@ namespace csgoDemoParser
             // Run Newton algorithm using blended velocity upon the projection data
             Vector projectionUsingSimulationValues = GetProjectedPosition(
                 projectedPositionAtLastUpdate,
-                simulatedVelocity * 4.0f,
+                simulatedVelocity * velocityMultiplier,
                 deltaTime
                 );
 
-            // Interpolate using Vector blend between simulation projection towards the projection using the lastt known values
+            // Interpolate using Vector blend between simulation projection towards the projection using the last known values
             deadReckonedPosition = VectorBlend(projectionUsingSimulationValues, projectionUsingLastKnownValues, deltaTime);
 
-            return deadReckonedPosition; //projectionUsingLastKnownValues;// 
+            return deadReckonedPosition;
         }
 
         /*

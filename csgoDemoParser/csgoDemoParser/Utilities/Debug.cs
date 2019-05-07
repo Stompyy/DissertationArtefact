@@ -5,11 +5,15 @@ using System.Windows.Forms;
 
 namespace csgoDemoParser
 {
+    /*
+     * Used for debugging purposes
+     */
     class Debug
     {
         /*
          * Debug tool - Following a long winded initial data collection period, 3/164 .dem files were discovered to be misnamed
-         * as de_Inferno map, and actually contained other map data. This function is required to find the map names from the .dem files
+         * as de_Inferno map, and actually contained other map data. This function finds the map names from the .dem files and
+         * writes them to an output CSV file
          */
         public static void WriteAllMapNamesToCSVFile()
         {
