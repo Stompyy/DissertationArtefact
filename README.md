@@ -16,6 +16,8 @@ Also in the build folder is control data for testing, although the names will no
 
 Also the final results that have been used in the dissertation.
 
+Dissertation PDF at: https://github.com/Stompyy/comp320-comp360-dissertation/blob/master/dissertation.pdf
+
 GitHub repo at: https://github.com/Stompyy/DissertationArtefact
 
 Trello user stories: https://trello.com/b/8sib9S5O/dissertationartefact
