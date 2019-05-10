@@ -1,5 +1,9 @@
 # Comp360_1_1607539
 
+Have now included all 43,305 path.csv files.
+
+Be warned, this raw data folder is 7.65GB large.
+
 ## DissertationArtefact
 
 csgo demoParser
